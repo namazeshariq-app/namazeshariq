@@ -14,4 +14,4 @@ command = "npx opennextjs-cloudflare build"
 [[d1_databases]]
 binding = "DB"
 database_name = "namaz_shariq_db"
-database_id = "placeholder-replace-with-your-cloudflare-d1-id"
+database_id = "8da7b1c7-91da-462a-8866-0d5869a4158c"
