@@ -1,0 +1,20 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: PerplexityBot
+User-Agent: ClaudeBot
+User-Agent: anthropic-ai
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: cohere-ai
+User-Agent: Bytespider
+User-Agent: meta-externalagent
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+
+Sitemap: https://namazeshariq.com/sitemap.xml

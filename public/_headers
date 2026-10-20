@@ -1,0 +1,14 @@
+/*
+  X-Robots-Tag: index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1
+  X-DNS-Prefetch-Control: on
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/api/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet

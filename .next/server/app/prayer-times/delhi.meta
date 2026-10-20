@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/prayer-times/layout,_N_T_/prayer-times/[city]/layout,_N_T_/prayer-times/[city]/page,_N_T_/prayer-times/delhi"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/26a62d49b7d6ee6f7f02c653b3f32439f7aee99d24c4dd500a3ca62c6903af1a/$/prayer-times/delhi",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/prayer-times/[city]/page"
+    },
+    "isFallback": false
+  }
+}

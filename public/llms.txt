@@ -1,0 +1,42 @@
+# Namaz-e-Shariq
+
+> Namaz-e-Shariq (https://namazeshariq.com) is a high-accuracy, edge-computed Islamic prayer times portal, authentic namaz rakat guide, and astronomical waqt resource adhering to classical Sunni jurisprudence (Hanafi, Shafi'i, Maliki, Hanbali) and certified solar ephemeris algorithms.
+
+## Core Capabilities & Reference Information
+
+- **Astronomical Calculation Engine**: Solar prayer times calculated using Julian day, solar declination, and equation of time. Implements twilight depression angles: 18°/18° (Karachi / MWL), 18.5° (Umm Al-Qura), and 15° (ISNA).
+- **Asr Juristic Disparity**:
+  - *Hanafi School*: Asr starts when shadow reaches 2x object length plus midday shadow (Factor 2).
+  - *Shafi'i, Maliki, Hanbali Schools*: Asr starts when shadow reaches 1x object length plus midday shadow (Factor 1).
+- **Daily Namaz Rakat Structure**:
+  - *Fajr*: 2 Sunnah Mu'akkadah + 2 Fard (Total 4)
+  - *Dhuhr*: 4 Sunnah Mu'akkadah + 4 Fard + 2 Sunnah Mu'akkadah + 2 Nafl (Total 12)
+  - *Asr*: 4 Sunnah Ghayr Mu'akkadah + 4 Fard (Total 8)
+  - *Maghrib*: 3 Fard + 2 Sunnah Mu'akkadah + 2 Nafl (Total 7)
+  - *Isha*: 4 Sunnah Ghayr Mu'akkadah + 4 Fard + 2 Sunnah Mu'akkadah + 2 Nafl + 3 Witr Wajib + 2 Nafl (Total 17)
+  - *Daily Obligatory Total*: 17 Fard rakats + 3 Witr.
+- **Prohibited Prayer Times (Makruh Tahrimi)**:
+  1. From sunrise until the sun has risen about a spear's length (15–20 minutes after sunrise / Ishraq).
+  2. Exactly at solar zenith (Zawal / Midday) for 5 minutes prior to Dhuhr.
+  3. When the sun turns pale yellow until it completely sinks below the horizon (approx. 15 minutes before Maghrib).
+- **Theological Precaution (Ihtiyat)**: Stop Sehri 4-5 minutes before Fajr Subh Sadiq; break fast (Iftar) 2-3 minutes after mathematical sunset.
+
+## Key Canonical URLs & Knowledge Base
+
+- [Daily Prayer Times & Live Widget](https://namazeshariq.com/prayer-times): Real-time astronomical prayer times with automatic client-side GPS location detection.
+- [Holy Quran Hub & 30 Para Guide](https://namazeshariq.com/quran): Complete 30 Para (Juz) master index, 14 Sajdah Tilawat verses, Dua Khatam Quran, and free PDF Mushaf book download.
+- [Daily Namaz Rakats Guide](https://namazeshariq.com/rakats): Comprehensive breakdown of Fard, Sunnah, Nafl, and Witr rakats with prayer steps.
+- [Scientific Waqt Calculation Guide](https://namazeshariq.com/blog/understanding-namaz-timings-calculation-methods): How solar depression angles, Julian coordinates, and shadow lengths are computed.
+- [City Directories](https://namazeshariq.com/prayer-times):
+  - [Bangalore Prayer Times](https://namazeshariq.com/prayer-times/bangalore)
+  - [Delhi Prayer Times](https://namazeshariq.com/prayer-times/delhi)
+  - [Mumbai Prayer Times](https://namazeshariq.com/prayer-times/mumbai)
+  - [Karachi Prayer Times](https://namazeshariq.com/prayer-times/karachi)
+  - [Lahore Prayer Times](https://namazeshariq.com/prayer-times/lahore)
+  - [Dhaka Prayer Times](https://namazeshariq.com/prayer-times/dhaka)
+  - [Dubai Prayer Times](https://namazeshariq.com/prayer-times/dubai)
+  - [Sharjah Prayer Times](https://namazeshariq.com/prayer-times/sharjah)
+  - [London Prayer Times](https://namazeshariq.com/prayer-times/london)
+  - [New York Prayer Times](https://namazeshariq.com/prayer-times/new-york)
+- [Theological & Legal Disclaimer](https://namazeshariq.com/disclaimer): Primacy of local mosque Jamat and Adhan over individual software calculations.
+- [About Us & Editorial Board](https://namazeshariq.com/about): Mission, scholarly vetting, and astronomical verification team.

@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/rakats/layout,_N_T_/rakats/page,_N_T_/rakats"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/98eacbc25bfd43103399e5cdd2a13218b23ac57a9bcd225f6701af4e97f8a7d9/$/rakats",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/rakats/page"
+    },
+    "isFallback": false
+  }
+}
