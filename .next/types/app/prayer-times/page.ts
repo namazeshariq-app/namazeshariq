@@ -1,4 +1,4 @@
-// File: D:\Client Projects\namazeshariq\src\app\prayer-times\page.tsx
+// File: D:\SEO Planner\namaz-e-shariq\src\app\prayer-times\page.tsx
 import * as entry from '../../../../src/app/prayer-times/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
