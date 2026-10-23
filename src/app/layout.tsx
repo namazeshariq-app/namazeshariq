@@ -117,6 +117,20 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="namaz-e-shariq" />
         <link rel="manifest" href="/site.webmanifest" />
 
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QKWQXYRPW" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4QKWQXYRPW');
+            `,
+          }}
+        />
+
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('namaz_theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark');document.documentElement.style.colorScheme='dark';}else{document.documentElement.classList.remove('dark');document.documentElement.style.colorScheme='light';}var l=localStorage.getItem('namaz_lang');if(l){document.documentElement.lang=l;document.documentElement.dir=(l==='ur'||l==='ar')?'rtl':'ltr';}else{document.documentElement.dir='ltr';}}catch(e){}})()`,
