@@ -181,7 +181,7 @@ ${t('asr')} (${school.toUpperCase()}): ${results.asr}
 ${t('maghrib')}: ${results.maghrib}
 ${t('isha')}: ${results.isha}
 ${t('tahajjud')}: ${results.tahajjud}
-Calculated via Namaz-e-Shariq (https://namazeshariq.com/prayer-times/${city.slug})`;
+Calculated via Namaz-e-Shariq (https://namaz-e-shariq.com/prayer-times/${city.slug})`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

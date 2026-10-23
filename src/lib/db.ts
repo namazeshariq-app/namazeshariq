@@ -93,8 +93,8 @@ function getLocalState(): LocalState {
       settings: {
         site_name: 'Namaz-e-Shariq',
         site_description: 'Modern Islamic Prayer Times, Detailed Namaz Rakats Guides, and Waqt Timetables for Global Cities.',
-        contact_email: 'contact@namazeshariq.com',
-        site_url: 'https://namazeshariq.com',
+        contact_email: 'contact@namaz-e-shariq.com',
+        site_url: 'https://namaz-e-shariq.com',
       },
       initialized: false,
     };
@@ -301,7 +301,7 @@ export async function createPost(data: Partial<Post>): Promise<Post> {
     focus_keyword: data.focus_keyword || '',
     meta_title: data.meta_title || data.title || '',
     meta_description: data.meta_description || data.excerpt || '',
-    canonical_url: data.canonical_url || `https://namazeshariq.com/blog/${data.slug}`,
+    canonical_url: data.canonical_url || `https://namaz-e-shariq.com/blog/${data.slug}`,
     keywords: data.keywords || '',
     schema_type: data.schema_type || 'Article',
     author_name: data.author_name || 'Mufti & Editorial Board',

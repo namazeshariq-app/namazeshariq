@@ -2,7 +2,7 @@ import { Post } from './db';
 import { FAQItem } from './articles-data';
 
 export const SITE_NAME = 'Namaz-e-Shariq';
-export const SITE_URL = 'https://namazeshariq.com';
+export const SITE_URL = 'https://namaz-e-shariq.com';
 export const DEFAULT_OG_IMAGE = 'https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1200&q=80';
 
 /**

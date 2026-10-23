@@ -117,7 +117,7 @@ export default function PostEditor({ initialPost, categories, isNew = false }: P
       focus_keyword: focusKeyword,
       meta_title: metaTitle || title,
       meta_description: metaDescription || excerpt,
-      canonical_url: canonicalUrl || `https://namazeshariq.com/blog/${slug}`,
+      canonical_url: canonicalUrl || `https://namaz-e-shariq.com/blog/${slug}`,
       keywords,
       schema_type: schemaType,
       author_name: authorName,
@@ -516,7 +516,7 @@ export default function PostEditor({ initialPost, categories, isNew = false }: P
                 type="text"
                 value={canonicalUrl}
                 onChange={(e) => setCanonicalUrl(e.target.value)}
-                placeholder={`https://namazeshariq.com/blog/${slug || 'post-slug'}`}
+                placeholder={`https://namaz-e-shariq.com/blog/${slug || 'post-slug'}`}
                 className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-brand-500 font-mono"
               />
             </div>

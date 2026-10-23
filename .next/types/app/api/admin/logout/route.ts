@@ -1,4 +1,4 @@
-// File: D:\Client Projects\namazeshariq\src\app\api\admin\logout\route.ts
+// File: D:\SEO Planner\namaz-e-shariq\src\app\api\admin\logout\route.ts
 import * as entry from '../../../../../../src/app/api/admin/logout/route.js'
 import type { NextRequest } from 'next/server.js'
 

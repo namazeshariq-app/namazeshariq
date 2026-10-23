@@ -108,7 +108,6 @@
     },
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
-    "output": "standalone",
     "modularizeImports": {
       "@mui/icons-material": {
         "transform": "@mui/icons-material/{{member}}"
@@ -117,7 +116,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\Client Projects\\namazeshariq",
+    "outputFileTracingRoot": "D:\\SEO Planner\\namaz-e-shariq",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -312,10 +311,10 @@
       "jose"
     ],
     "turbopack": {
-      "root": "D:\\Client Projects\\namazeshariq"
+      "root": "D:\\SEO Planner\\namaz-e-shariq"
     }
   },
-  "appDir": "D:\\Client Projects\\namazeshariq",
+  "appDir": "D:\\SEO Planner\\namaz-e-shariq",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

@@ -117,7 +117,7 @@ export default function TermsPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Permitted Use:</strong> You are granted a worldwide, revocable, non-exclusive license to view, download, print, and distribute our prayer timetables and guides for personal spiritual practice, family education, local mosque notice boards, university prayer room bulletin boards, and non-commercial community newsletters, provided that attribution to <em>Namaz-e-Shariq (https://namazeshariq.com)</em> is maintained.
+                <strong>Permitted Use:</strong> You are granted a worldwide, revocable, non-exclusive license to view, download, print, and distribute our prayer timetables and guides for personal spiritual practice, family education, local mosque notice boards, university prayer room bulletin boards, and non-commercial community newsletters, provided that attribution to <em>Namaz-e-Shariq (https://namaz-e-shariq.com)</em> is maintained.
               </li>
               <li>
                 <strong>Prohibited Use:</strong> Bulk automated scraping, commercial redistribution, charging subscription fees for our data, or re-publishing full articles without explicit written permission from our editorial board is strictly prohibited.
@@ -153,7 +153,7 @@ export default function TermsPage() {
             </p>
             <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2 text-xs">
               <p><strong>Editorial Legal Desk:</strong> Namaz-e-Shariq Governance Board</p>
-              <p><strong>Inquiries & Notices:</strong> <a href="mailto:terms@namazeshariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">terms@namazeshariq.com</a> / <a href="mailto:contact@namazeshariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">contact@namazeshariq.com</a></p>
+              <p><strong>Inquiries & Notices:</strong> <a href="mailto:terms@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">terms@namaz-e-shariq.com</a> / <a href="mailto:contact@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">contact@namaz-e-shariq.com</a></p>
               <p><strong>Direct Inquiries Portal:</strong> <Link href="/contact" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">Contact Editorial Team</Link></p>
             </div>
           </section>
