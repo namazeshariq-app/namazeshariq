@@ -117,7 +117,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\SEO Planner\\namaz-e-shariq",
+    "outputFileTracingRoot": "D:\\Client Projects\\namazeshariq",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -312,10 +312,10 @@
       "jose"
     ],
     "turbopack": {
-      "root": "D:\\SEO Planner\\namaz-e-shariq"
+      "root": "D:\\Client Projects\\namazeshariq"
     }
   },
-  "appDir": "D:\\SEO Planner\\namaz-e-shariq",
+  "appDir": "D:\\Client Projects\\namazeshariq",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

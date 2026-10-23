@@ -1,4 +1,4 @@
-// File: D:\SEO Planner\namaz-e-shariq\src\app\admin\categories\page.tsx
+// File: D:\Client Projects\namazeshariq\src\app\admin\categories\page.tsx
 import * as entry from '../../../../../src/app/admin/categories/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
