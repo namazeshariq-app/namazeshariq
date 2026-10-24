@@ -17,6 +17,7 @@ import {
   Info,
 } from 'lucide-react';
 import FAQAccordion from '@/components/FAQAccordion';
+import QuranDownloadHub from '@/components/QuranDownloadHub';
 import { generateBreadcrumbSchema, generateFAQSchema, getAlternateLanguages, SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -28,6 +29,10 @@ export const metadata: Metadata = {
     'quran para 1 to 30',
     'quran sharif para 1 to 30',
     'quran book download',
+    'english quran download',
+    'urdu quran pdf download',
+    'telugu quran pdf',
+    'arabic quran pdf big font',
     'quran para 2',
     '3rd para of quran',
     'quran para 8',
@@ -121,6 +126,11 @@ export default function QuranHubPage() {
         'Tagging Al Quran is a contemporary study method where readers use color-coded bookmarks and sticky notes to categorize verses by themes such as Dua, Sabr (patience), Tawakkul (trust), Jannah, family ethics, and rulings. It encourages active reflection (Tadabbur) alongside daily recitation.',
     },
     {
+      question: 'Can I preview and download the Holy Quran in English, Urdu, Telugu, and Arabic?',
+      answer:
+        'Yes. Namaz-e-Shariq provides direct PDF downloads and an interactive live previewer for the Holy Quran in Arabic (big font), English translation, Urdu translation and commentary, and Telugu translation (తెలుగు అనువాదం). You can read each translation online in your browser or download the full PDF free of charge for offline recitation.',
+    },
+    {
       question: 'Where can I read Tafhimul Quran Bangla and access Quran Shikkha or eLearning?',
       answer:
         'Tafhimul Quran Bangla (Sayyid Abul A’la Maududi’s commentary translated into Bengali) is available across major Islamic learning portals. For beginners and children, Quran Shikkha modules provide phonetics-based Noorani Qaida training, while modern eLearning Quran academies offer one-on-one virtual Tajweed tutoring globally.',
@@ -172,12 +182,11 @@ export default function QuranHubPage() {
             {/* Quick Action Buttons */}
             <div className="pt-2 flex flex-wrap gap-3">
               <a
-                href="/downloads/holy-quran-guide-and-index.pdf"
-                download="holy-quran-30-para-guide.pdf"
+                href="#download-quran"
                 className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md transition flex items-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                <span>Download Quran 30 Para Guide (PDF)</span>
+                <span>Download Quran Books (4 Languages)</span>
               </a>
               <a
                 href="#juz-index"
@@ -197,102 +206,10 @@ export default function QuranHubPage() {
           </div>
         </div>
 
-        {/* Free Quran Book Download Hub Cards */}
-        <section className="space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
-                <Download className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                Download Quran Books & Digital Mushaf Editions
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-                Direct, high-definition digital Mushafs for mobile phones, tablets, and desktop reading. Free forever.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Card 1: Reference Guide & Index PDF */}
-            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xs flex flex-col justify-between space-y-4 hover:border-emerald-500/50 transition">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
-                  PDF
-                </div>
-                <h3 className="font-bold text-slate-900 dark:text-slate-100 text-lg">
-                  Quran 30 Para Quick Guide & Index
-                </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Compact 2-page print-ready reference table featuring all 30 Paras, verse bounds, 14 Sajdah Tilawat locations, and full Dua Khatam Quran with English translation.
-                </p>
-                <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
-                  Size: ~8 KB • Format: Portable PDF • Instant Download
-                </div>
-              </div>
-              <a
-                href="/downloads/holy-quran-guide-and-index.pdf"
-                download="holy-quran-30-para-guide.pdf"
-                className="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition"
-              >
-                <Download className="w-4 h-4" />
-                <span>Download Quick Guide</span>
-              </a>
-            </div>
-
-            {/* Card 2: 15-Line Madani Mushaf Edition */}
-            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xs flex flex-col justify-between space-y-4 hover:border-emerald-500/50 transition">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-emerald-400 flex items-center justify-center font-bold">
-                  15L
-                </div>
-                <h3 className="font-bold text-slate-900 dark:text-slate-100 text-lg">
-                  15-Line Madani Mushaf (Complete)
-                </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  The world-standard 604-page King Fahd Complex Uthmani script used globally for Hifz and daily recitation. Crisp typography with complete diacritics (Harakat).
-                </p>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">
-                  Standard 604 Pages • Uthmani Calligraphy • King Fahd Edition
-                </div>
-              </div>
-              <a
-                href="https://archive.org/download/quran-madani-15-lines/Quran-Madani-15-Lines.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Download 15-Line Mushaf (PDF)</span>
-              </a>
-            </div>
-
-            {/* Card 3: 16-Line Indo-Pak Mushaf Edition */}
-            <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-xs flex flex-col justify-between space-y-4 hover:border-emerald-500/50 transition">
-              <div className="space-y-2">
-                <div className="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-teal-400 flex items-center justify-center font-bold">
-                  16L
-                </div>
-                <h3 className="font-bold text-slate-900 dark:text-slate-100 text-lg">
-                  16-Line Indo-Pak Nastaliq Mushaf
-                </h3>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                  Beloved Nastaliq / South Asian script prominent across India, Pakistan, Bangladesh, and diaspora communities. Clear Waqf pause indicators and bold verse separators.
-                </p>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">
-                  548 Pages • South Asian Nastaliq • Tajweed Markers
-                </div>
-              </div>
-              <a
-                href="https://archive.org/download/quran-indo-pak-16-lines/Quran-Indo-Pak-16-Lines.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full py-2.5 px-4 rounded-xl bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center gap-2 transition"
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Download Indo-Pak Mushaf (PDF)</span>
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* Free Quran Book Download Hub & Live Preview in 4 Languages */}
+        <div id="download-quran">
+          <QuranDownloadHub />
+        </div>
 
         {/* Essential Quran Statistics Bar */}
         <section className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xs">
