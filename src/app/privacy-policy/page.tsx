@@ -166,7 +166,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2 text-xs">
               <p><strong>Compliance & Privacy Desk:</strong> Namaz-e-Shariq Editorial Board</p>
-              <p><strong>Direct Electronic Inquiries:</strong> <a href="mailto:privacy@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">privacy@namaz-e-shariq.com</a> / <a href="mailto:contact@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">contact@namaz-e-shariq.com</a></p>
+              <p><strong>Direct Electronic Inquiries:</strong> <a href="mailto:namazeshariq@gmail.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">namazeshariq@gmail.com</a></p>
               <p><strong>Response Time Commitment:</strong> Within 24 to 48 business hours.</p>
               <p><strong>Platform Canonical URL:</strong> <a href={SITE_URL} className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">{SITE_URL}</a></p>
             </div>

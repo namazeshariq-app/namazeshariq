@@ -93,7 +93,7 @@ function getLocalState(): LocalState {
       settings: {
         site_name: 'Namaz-e-Shariq',
         site_description: 'Modern Islamic Prayer Times, Detailed Namaz Rakats Guides, and Waqt Timetables for Global Cities.',
-        contact_email: 'contact@namaz-e-shariq.com',
+        contact_email: 'namazeshariq@gmail.com',
         site_url: 'https://namaz-e-shariq.com',
       },
       initialized: false,

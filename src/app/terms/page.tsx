@@ -153,7 +153,7 @@ export default function TermsPage() {
             </p>
             <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2 text-xs">
               <p><strong>Editorial Legal Desk:</strong> Namaz-e-Shariq Governance Board</p>
-              <p><strong>Inquiries & Notices:</strong> <a href="mailto:terms@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">terms@namaz-e-shariq.com</a> / <a href="mailto:contact@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">contact@namaz-e-shariq.com</a></p>
+              <p><strong>Inquiries & Notices:</strong> <a href="mailto:namazeshariq@gmail.com" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">namazeshariq@gmail.com</a></p>
               <p><strong>Direct Inquiries Portal:</strong> <Link href="/contact" className="text-brand-700 dark:text-emerald-400 font-semibold hover:underline">Contact Editorial Team</Link></p>
             </div>
           </section>

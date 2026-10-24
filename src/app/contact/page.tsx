@@ -23,7 +23,7 @@ export default function ContactPage() {
     {
       question: 'How can a local mosque submit their monthly Jamat timetable?',
       answer:
-        'Mosque trustees and imams can submit their official monthly schedule using our submission form below or by emailing contact@namaz-e-shariq.com with the mosque name, full address, GPS coordinates, and a high-resolution photo or PDF of the verified Jamat schedule.',
+        'Mosque trustees and imams can submit their official monthly schedule using our submission form below or by emailing namazeshariq@gmail.com with the mosque name, full address, GPS coordinates, and a high-resolution photo or PDF of the verified Jamat schedule.',
     },
     {
       question: 'What should I do if the prayer times differ slightly from my local mosque?',
@@ -52,12 +52,12 @@ export default function ContactPage() {
     mainEntity: {
       '@type': 'Organization',
       name: SITE_NAME,
-      email: 'contact@namaz-e-shariq.com',
+      email: 'namazeshariq@gmail.com',
       url: SITE_URL,
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'editorial support',
-        email: 'contact@namaz-e-shariq.com',
+        email: 'namazeshariq@gmail.com',
         availableLanguage: ['English', 'Urdu', 'Arabic', 'Bengali'],
       },
     },
@@ -111,8 +111,8 @@ export default function ContactPage() {
               <div className="space-y-3 pt-2 text-xs">
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
                   <span className="font-bold text-slate-900 dark:text-slate-100 block">General & Editorial Desk</span>
-                  <a href="mailto:contact@namaz-e-shariq.com" className="text-brand-700 dark:text-emerald-400 hover:underline">
-                    contact@namaz-e-shariq.com
+                  <a href="mailto:namazeshariq@gmail.com" className="text-brand-700 dark:text-emerald-400 hover:underline">
+                    namazeshariq@gmail.com
                   </a>
                 </div>
 
@@ -120,22 +120,22 @@ export default function ContactPage() {
                   <span className="font-bold text-emerald-950 dark:text-emerald-200 block text-xs">Admin & Website Manager Desk</span>
                   <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">Direct confidential channel for technical, legal, and operational leadership.</p>
                   <a
-                    href="mailto:admin@namaz-e-shariq.com?subject=Direct%20Inquiry%20to%20Admin%20-%20Namaz-e-Shariq"
+                    href="mailto:namazeshariq@gmail.com?subject=Direct%20Inquiry%20to%20Admin%20-%20Namaz-e-Shariq"
                     className="inline-flex items-center gap-1.5 mt-1.5 text-xs font-bold text-emerald-800 dark:text-emerald-300 hover:text-emerald-950 dark:hover:text-emerald-100 underline"
                   >
-                    <span>admin@namaz-e-shariq.com</span>
+                    <span>namazeshariq@gmail.com</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
                   <span className="font-bold text-slate-900 dark:text-slate-100 block">Mosque Timetable Submissions</span>
-                  <span className="text-slate-500 dark:text-slate-400">masajid@namaz-e-shariq.com</span>
+                  <a href="mailto:namazeshariq@gmail.com?subject=Mosque%20Timetable%20Submission" className="text-slate-600 dark:text-slate-300 hover:underline">namazeshariq@gmail.com</a>
                 </div>
 
                 <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-100 dark:border-slate-700/60">
                   <span className="font-bold text-slate-900 dark:text-slate-100 block">Astronomical & Waqt Research</span>
-                  <span className="text-slate-500 dark:text-slate-400">falakiyyat@namaz-e-shariq.com</span>
+                  <a href="mailto:namazeshariq@gmail.com?subject=Astronomical%20Research%20Inquiry" className="text-slate-600 dark:text-slate-300 hover:underline">namazeshariq@gmail.com</a>
                 </div>
               </div>
             </div>

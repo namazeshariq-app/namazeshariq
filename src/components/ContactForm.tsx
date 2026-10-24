@@ -21,7 +21,7 @@ export default function ContactForm() {
 
   const handleDirectEmail = (e: React.MouseEvent) => {
     e.preventDefault();
-    const adminEmail = 'admin@namaz-e-shariq.com';
+    const adminEmail = 'namazeshariq@gmail.com';
     const subjectPrefix = formData.subject ? `[${formData.subject.toUpperCase()}] ` : '';
     const subject = encodeURIComponent(`${subjectPrefix}Namaz-e-Shariq Inquiry - ${formData.name || 'Website Visitor'}`);
     const body = encodeURIComponent(
@@ -38,7 +38,7 @@ I am writing directly regarding the Namaz-e-Shariq platform:
 ${formData.message || '(Please enter your inquiry, local mosque Jamat timetable, or feedback here)'}
 
 ---
-Sent directly to admin@namaz-e-shariq.com via Namaz-e-Shariq Contact Portal`
+Sent directly to namazeshariq@gmail.com via Namaz-e-Shariq Contact Portal`
     );
     window.location.href = `mailto:${adminEmail}?subject=${subject}&body=${body}`;
   };
@@ -230,7 +230,7 @@ Sent directly to admin@namaz-e-shariq.com via Namaz-e-Shariq Contact Portal`
           onClick={handleDirectEmail}
           className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-700/20 transition cursor-pointer border border-emerald-500"
           aria-label="Email directly to admin or website manager"
-          title="Send direct email to admin@namaz-e-shariq.com with your input pre-filled"
+          title="Send direct email to namazeshariq@gmail.com with your input pre-filled"
         >
           <Mail className="w-4 h-4 text-emerald-100" />
           <span>Email Directly to Admin / Manager</span>
@@ -239,7 +239,7 @@ Sent directly to admin@namaz-e-shariq.com via Namaz-e-Shariq Contact Portal`
       </div>
 
       <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2">
-        💡 <strong>Direct Access:</strong> Clicking &ldquo;Email Directly to Admin / Manager&rdquo; opens your device&rsquo;s email client (Gmail, Outlook, Mail app) addressed directly to <code className="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-emerald-700 dark:text-emerald-400 font-mono">admin@namaz-e-shariq.com</code> with all your inputs pre-filled.
+        💡 <strong>Direct Access:</strong> Clicking &ldquo;Email Directly to Admin / Manager&rdquo; opens your device&rsquo;s email client (Gmail, Outlook, Mail app) addressed directly to <code className="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-emerald-700 dark:text-emerald-400 font-mono">namazeshariq@gmail.com</code> with all your inputs pre-filled.
       </p>
     </form>
   );
