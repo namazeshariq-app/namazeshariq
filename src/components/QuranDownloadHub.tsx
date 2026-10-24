@@ -216,24 +216,48 @@ export default function QuranDownloadHub() {
         <div className="space-y-2 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
             <Sparkles className="w-3.5 h-3.5" />
-            Companion Study Guide (Free Print-Ready PDF)
+            Holy Quran Para 1 &amp; 30 Para Guide (Verified Digital Mushaf)
           </div>
           <h3 className="text-xl sm:text-2xl font-bold">
-            Download the Complete Quran 1-30 Para Index & Sajdah Guide
+            Download Quran Para 1 (Alif Lam Meem) &amp; 30 Para Guide
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Need a concise 2-page pocket summary? Download our exclusive reference PDF featuring all 30 Juz boundaries, surah names, 14 Sajdah Tilawat verses, and the authentic Dua Khatam Quran with English translation.
+            Access the complete 27-page high-definition digital Mushaf of Para 1 featuring Surah Al-Fatiha and Surah Al-Baqarah in classical calligraphy, complete with the 30 Para boundaries and Tajweed markers.
           </p>
         </div>
 
         <div className="flex flex-wrap sm:flex-nowrap gap-3 shrink-0 w-full sm:w-auto">
+          <button
+            type="button"
+            onClick={() =>
+              handleOpenPreview({
+                id: '30-para-guide',
+                language: 'Holy Quran Para 1 (Alif Lam Meem) Mushaf',
+                nativeTitle: 'القرآن الكريم - الجزء الأول (الم)',
+                description:
+                  'High-resolution 27-page digital Mushaf of Para 1 containing Surah Al-Fatiha and Surah Al-Baqarah with traditional ornamentation and Tajweed pause markers.',
+                downloadUrl: '/downloads/holy-quran-guide-and-index.pdf',
+                badge: 'JUZ 1',
+                badgeColor: 'bg-emerald-600 text-white',
+                tag: 'Para 1 Mushaf & Index',
+                accentBorder: 'border-emerald-500',
+                format: 'PDF',
+                pagesInfo: '27 Pages • Classical Calligraphy',
+              })
+            }
+            className="w-full sm:w-auto px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 border border-white/20 transition cursor-pointer"
+          >
+            <Eye className="w-4 h-4 text-emerald-400" />
+            <span>Preview Online</span>
+          </button>
+
           <a
             href="/downloads/holy-quran-guide-and-index.pdf"
-            download="holy-quran-30-para-guide.pdf"
+            download="holy-quran-para-1-and-guide.pdf"
             className="w-full sm:w-auto px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition"
           >
             <Download className="w-4 h-4" />
-            <span>Download 30 Para Guide</span>
+            <span>Download PDF</span>
           </a>
         </div>
       </div>

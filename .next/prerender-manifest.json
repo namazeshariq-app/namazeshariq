@@ -26,35 +26,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/robots.txt": {
-      "initialHeaders": {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "text/plain",
-        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
-      },
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/robots.txt",
-      "dataRoute": null,
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/about": {
       "experimentalBypassFor": [
         {
@@ -103,30 +74,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/privacy-policy": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/privacy-policy",
-      "dataRoute": "/privacy-policy.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/contact": {
       "experimentalBypassFor": [
         {
@@ -166,6 +113,54 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/prayer-times",
       "dataRoute": "/prayer-times.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/privacy-policy": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/privacy-policy",
+      "dataRoute": "/privacy-policy.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/admin/posts": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/admin/posts",
+      "dataRoute": "/admin/posts.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -655,78 +650,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/admin/login": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/admin/login",
-      "dataRoute": "/admin/login.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/admin/posts": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/admin/posts",
-      "dataRoute": "/admin/posts.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/quran": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/quran",
-      "dataRoute": "/quran.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/terms": {
       "experimentalBypassFor": [
         {
@@ -742,6 +665,35 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/terms",
       "dataRoute": "/terms.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/robots.txt": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/robots.txt",
+      "dataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -775,10 +727,58 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/admin/login": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/admin/login",
+      "dataRoute": "/admin/login.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/quran": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/quran",
+      "dataRoute": "/quran.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/sitemap.xml": {
       "initialHeaders": {
-        "cache-control": "public, max-age=0, must-revalidate",
-        "content-type": "application/xml",
+        "cache-control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400",
+        "content-type": "application/xml; charset=utf-8",
         "x-next-cache-tags": "_N_T_/layout,_N_T_/sitemap.xml/layout,_N_T_/sitemap.xml/route,_N_T_/sitemap.xml"
       },
       "experimentalBypassFor": [
@@ -792,7 +792,8 @@
           "value": "multipart/form-data;.*"
         }
       ],
-      "initialRevalidateSeconds": false,
+      "initialRevalidateSeconds": 3600,
+      "initialExpireSeconds": 31536000,
       "srcRoute": "/sitemap.xml",
       "dataRoute": null,
       "allowHeader": [
@@ -1027,8 +1028,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "ef092a6ca757e6a1d62260d88b38143d",
-    "previewModeSigningKey": "f4b51d8fbbab75e463a6a5cf8f2101f13b9e9aca6571d8c3f729c2cba2bd7274",
-    "previewModeEncryptionKey": "6585c78b9bec20de327280ad09aa949848200272656cc6596c18c6c7c6a0acc9"
+    "previewModeId": "8d576b8406241895562776d42cfe2b65",
+    "previewModeSigningKey": "97b691e36223b8e5d43897631dff6207c1d2c4e53f314af40380b11c1aabb6bc",
+    "previewModeEncryptionKey": "978c0684cba8452ec2b709f85dfa2d18cc3db1cf259917214b8f50916ccab27c"
   }
 }
