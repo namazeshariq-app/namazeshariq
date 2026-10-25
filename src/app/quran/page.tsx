@@ -5,44 +5,46 @@ import {
   BookOpen,
   Download,
   FileText,
-  Search,
   Sparkles,
   ChevronRight,
   Bookmark,
   CheckCircle,
-  HelpCircle,
-  ShieldCheck,
-  ExternalLink,
   BookMarked,
   Info,
+  CheckCircle2,
+  ArrowRight,
+  Heart,
+  Eye,
 } from 'lucide-react';
 import FAQAccordion from '@/components/FAQAccordion';
 import QuranDownloadHub from '@/components/QuranDownloadHub';
 import { generateBreadcrumbSchema, generateFAQSchema, getAlternateLanguages, SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Holy Quran 1-30 Para Guide & Download | Namaz-e-Shariq',
+  title: 'Quran Sharif PDF: Para 1 to 30 & 15 Line Quran PDF Download',
   description:
-    'Download the complete Quran PDF and explore the 1 to 30 Para index, 14 Sajdah Tilawat verses, Dua Khatam Quran, and comprehensive Tajweed study guides.',
+    'Download free Quran Sharif PDF (Para 1 to 30 PDF, 15 line Quran PDF, Bangla Quran PDF, Quran Para 30 PDF) & authentic Dua after Namaz PDF with live preview.',
   alternates: getAlternateLanguages('/quran'),
   keywords: [
+    'quran sharif pdf',
+    'quran sharif para 1 to 30 pdf',
+    '15 line quran pdf',
+    'dua after namaz pdf',
+    'bangla quran pdf',
+    'quran para 30 pdf',
     'quran para 1 to 30',
-    'quran sharif para 1 to 30',
-    'quran book download',
-    'english quran download',
-    'urdu quran pdf download',
-    'telugu quran pdf',
-    'arabic quran pdf big font',
     'quran para 2',
     '3rd para of quran',
     'quran para 8',
     'quran para 29',
-    'quran para 30',
     'first sajdah in quran',
     'how many sajdah in quran',
     'how many pages in quran',
     'shortest surah in quran',
     'dua khatam quran',
+    'english quran download',
+    'urdu quran pdf download',
+    'telugu quran pdf',
   ],
 };
 
@@ -101,39 +103,44 @@ const SAJDAH_VERSES = [
 export default function QuranHubPage() {
   const quranFaqs = [
     {
-      question: 'How many total Paras (Juz) and pages are in the Holy Quran?',
+      question: 'Where can I download the complete Quran Sharif Para 1 to 30 PDF for free?',
       answer:
-        'The Holy Quran contains 30 Paras (Juz) and 114 Surahs. In the standard King Fahd Complex Madani Mushaf (15-line Uthmani script), there are exactly 604 pages, structured so that each Juz comprises 20 pages (with the 30th Juz covering 23 pages). Indo-Pak 16-line editions generally span 548 pages, and 13-line prints span 848 pages.',
+        'You can download the full Quran Sharif Para 1 to 30 PDF directly on Namaz-e-Shariq without registration. Our verified digital Mushaf includes all 30 Paras (Juz) with clear Arabic calligraphy, Ruku demarcations, the 14 Sajdah Tilawat verses, and the authentic Dua Khatam Quran supplication.',
+    },
+    {
+      question: 'What is the 15 line Quran PDF and why is it preferred for Hifz?',
+      answer:
+        'The 15 line Quran PDF follows the standard Saudi King Fahd Complex (Madani script) Mushaf layout spanning exactly 604 pages. It is universally preferred for Quran memorization (Hifz) because every single page starts with the beginning of an ayah and concludes with an ayah ending (Ayat-e-Khatam), creating an unambiguous visual memory anchor for students.',
+    },
+    {
+      question: 'What authentic supplications are included in the Dua After Namaz PDF?',
+      answer:
+        'Our free Dua after Namaz PDF contains authentic post-prayer supplications from Sahih al-Bukhari and Sahih Muslim. It includes the 3-fold Istighfar, "Allahumma Antas-Salam", Ayat al-Kursi (which Prophet Muhammad ﷺ stated secures Paradise), Tasbeeh Fatimi (33x SubhanAllah, 33x Alhamdulillah, 34x Allahu Akbar), and comprehensive forgiveness prayers in Arabic with English translation.',
+    },
+    {
+      question: 'What is Quran Para 30 PDF (Juz Amma) and why is it recited daily in prayer?',
+      answer:
+        'Quran Para 30 PDF (known as Juz Amma) contains the final 37 short Makki surahs of the Holy Quran, starting from Surah An-Naba (78) through Surah An-Nas (114). Due to their rhythmic eloquence, spiritual depth, and brevity, these surahs are recited regularly in the daily Fard and Sunnah rakats of Salah by Muslims around the globe.',
+    },
+    {
+      question: 'Can I download the Bangla Quran PDF with Tafhimul Quran commentary?',
+      answer:
+        'Yes. We provide direct access to download the Bangla Quran PDF featuring complete Bengali translation (বাংলা অনুবাদ) and insightful Tafhimul Quran commentary. It allows Bengali-speaking believers across Bangladesh, West Bengal, and worldwide communities to study the divine meanings in clear, modern Bengali.',
+    },
+    {
+      question: 'How many total Paras (Juz) and pages are in the Holy Quran Sharif PDF?',
+      answer:
+        'The Holy Quran Sharif contains 30 Paras (Juz) and 114 Surahs. In the globally recognized 15 line Quran PDF (Saudi Madani Mushaf), there are exactly 604 pages, structured systematically so that each Para spans 20 pages (with Para 30 spanning 23 pages). Indo-Pak 16-line editions generally span 548 pages, and 13-line prints span 848 pages.',
     },
     {
       question: 'How many Sajdah Tilawat are in the Quran and which is the first Sajdah?',
       answer:
-        'There are 14 agreed-upon Sajdah Tilawat (prostrations of recitation) in the Holy Quran according to the Hanafi, Shafi’i, and Hanbali schools. The first sajdah in Quran occurs in Surah Al-A’raf (Chapter 7, Verse 206) in Para 9.',
-    },
-    {
-      question: 'What is the shortest surah in the Holy Quran?',
-      answer:
-        'The shortest surah in the Holy Quran is Surah Al-Kawthar (Chapter 108). It consists of only 3 verses (ayat), 10 Arabic words, and 42 letters. It was revealed to comfort the Prophet Muhammad (peace be upon him) with the promise of divine abundance.',
+        'There are 14 agreed-upon Sajdah Tilawat (prostrations of recitation) in the Holy Quran according to the major Islamic jurisprudence schools. The first sajdah in Quran occurs in Surah Al-A’raf (Chapter 7, Verse 206) in Para 9.',
     },
     {
       question: 'What is Dua Khatam Quran and when should it be recited?',
       answer:
-        'Dua Khatam Quran is the traditional supplication recited upon concluding the recitation of the entire Quran (from Surah Al-Fatiha to Surah An-Nas). Scholars note that prayers offered at the completion of a Quran recitation are answered with divine mercy and forgiveness.',
-    },
-    {
-      question: 'What is tagging Al Quran and how does it assist in daily reflection?',
-      answer:
-        'Tagging Al Quran is a contemporary study method where readers use color-coded bookmarks and sticky notes to categorize verses by themes such as Dua, Sabr (patience), Tawakkul (trust), Jannah, family ethics, and rulings. It encourages active reflection (Tadabbur) alongside daily recitation.',
-    },
-    {
-      question: 'Can I preview and download the Holy Quran in English, Urdu, Telugu, and Arabic?',
-      answer:
-        'Yes. Namaz-e-Shariq provides direct PDF downloads and an interactive live previewer for the Holy Quran in Arabic (big font), English translation, Urdu translation and commentary, and Telugu translation (తెలుగు అనువాదం). You can read each translation online in your browser or download the full PDF free of charge for offline recitation.',
-    },
-    {
-      question: 'Where can I read Tafhimul Quran Bangla and access Quran Shikkha or eLearning?',
-      answer:
-        'Tafhimul Quran Bangla (Sayyid Abul A’la Maududi’s commentary translated into Bengali) is available across major Islamic learning portals. For beginners and children, Quran Shikkha modules provide phonetics-based Noorani Qaida training, while modern eLearning Quran academies offer one-on-one virtual Tajweed tutoring globally.',
+        'Dua Khatam Quran is the traditional supplication recited upon concluding the recitation of the entire Quran (from Surah Al-Fatiha to Surah An-Nas). According to Hadith traditions, prayers offered at the completion of a Quran recitation are granted special divine mercy and acceptance.',
     },
   ];
 
@@ -142,6 +149,93 @@ export default function QuranHubPage() {
     { name: 'Home', url: SITE_URL },
     { name: 'Holy Quran Hub', url: `${SITE_URL}/quran` },
   ]);
+
+  // DigitalDocument Schemas for Rich Snippet Download indexing
+  const digitalDocumentsSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${SITE_URL}/quran#quran-sharif-para-1-30-pdf`,
+        name: 'Quran Sharif Para 1 to 30 PDF (Full Mushaf)',
+        description:
+          'Download complete Quran Sharif Para 1 to 30 PDF featuring authentic Uthmani script, 14 Sajdah Tilawat verses, and Dua Khatam Quran.',
+        encodingFormat: 'application/pdf',
+        url: `${SITE_URL}/downloads/holy-quran-guide-and-index.pdf`,
+        inLanguage: ['ar', 'en', 'ur'],
+        isAccessibleForFree: true,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Namaz-e-Shariq',
+          url: SITE_URL,
+        },
+      },
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${SITE_URL}/quran#15-line-quran-pdf`,
+        name: '15 Line Quran PDF (Saudi Madani Script)',
+        description:
+          'Download authentic 15 line Quran PDF in standard King Fahd Saudi Madani script, optimized for Hifz memorization with 604 pages.',
+        encodingFormat: 'application/pdf',
+        url: 'https://www.pdfquran.com/download/big/big-quran.pdf',
+        inLanguage: 'ar',
+        isAccessibleForFree: true,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Namaz-e-Shariq',
+          url: SITE_URL,
+        },
+      },
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${SITE_URL}/quran#dua-after-namaz-pdf`,
+        name: 'Dua After Namaz PDF & Masnoon Adhkar',
+        description:
+          'Download authentic Dua after Namaz PDF featuring Prophetic post-prayer supplications, Ayat al-Kursi, and Tasbeeh Fatimi in Arabic and English.',
+        encodingFormat: 'application/pdf',
+        url: `${SITE_URL}/downloads/dua-after-namaz-and-masnoon-adhkar.pdf`,
+        inLanguage: ['ar', 'en'],
+        isAccessibleForFree: true,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Namaz-e-Shariq',
+          url: SITE_URL,
+        },
+      },
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${SITE_URL}/quran#quran-para-30-pdf`,
+        name: 'Quran Para 30 PDF (Juz Amma)',
+        description:
+          'Download verified Quran Para 30 PDF containing all 37 short Makki surahs from Surah An-Naba to Surah An-Nas for daily Salah recitation.',
+        encodingFormat: 'application/pdf',
+        url: `${SITE_URL}/downloads/quran-para-30-juz-amma.pdf`,
+        inLanguage: 'ar',
+        isAccessibleForFree: true,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Namaz-e-Shariq',
+          url: SITE_URL,
+        },
+      },
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${SITE_URL}/quran#bangla-quran-pdf`,
+        name: 'Bangla Quran PDF (পবিত্র কুরআন শরীফ বাংলা)',
+        description:
+          'Download full Bangla Quran PDF with authentic Bengali translation and Tafhimul Quran commentary for study in Bangladesh and India.',
+        encodingFormat: 'application/pdf',
+        url: 'https://www.pdfquran.com/download/bengali/bengali-quran.pdf',
+        inLanguage: ['bn', 'ar'],
+        isAccessibleForFree: true,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Namaz-e-Shariq',
+          url: SITE_URL,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 min-h-screen py-10 transition-colors duration-200">
@@ -155,13 +249,17 @@ export default function QuranHubPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalDocumentsSchema) }}
+      />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Breadcrumb Navigation */}
         <nav className="flex items-center text-xs text-slate-500 dark:text-slate-400 gap-1.5" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition">Home</Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-          <span className="text-slate-800 dark:text-slate-200 font-medium">Holy Quran 1-30 Para & Book Download</span>
+          <span className="text-slate-800 dark:text-slate-200 font-medium">Holy Quran Sharif PDF &amp; Study Hub</span>
         </nav>
 
         {/* Hero Section */}
@@ -170,13 +268,13 @@ export default function QuranHubPage() {
           <div className="max-w-3xl space-y-4 relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
               <Sparkles className="w-3.5 h-3.5" />
-              Complete Quranic Educational & Download Hub
+              Complete Quran Sharif PDF &amp; Islamic Resource Portal
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-              Holy Quran Sharif: <span className="text-emerald-400">1 to 30 Para</span> Master Index & PDF Book Download
+              Holy Quran Sharif PDF: <span className="text-emerald-400">Para 1 to 30</span>, 15 Line &amp; Dua Guide
             </h1>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Explore the sacred architecture of the Holy Quran. Access verified digital downloads, investigate all 30 Paras (Juz), master the 14 Sajdah Tilawat verses, recite the authentic Dua Khatam Quran, and benefit from modern Tadabbur study frameworks.
+              Download authentic editions of the Holy <strong>Quran Sharif PDF</strong> in crystal-clear digital prints. Access the complete <strong>Quran Sharif Para 1 to 30 PDF</strong> with surah indices, the standard Saudi <strong>15 line Quran PDF</strong> for effortless Hifz memorization, regional translations including the <strong>Bangla Quran PDF</strong>, and the dedicated <strong>Quran Para 30 PDF</strong> (Juz Amma) for daily prayers. You can also download our verified <strong>Dua after Namaz PDF</strong> with authentic post-Salah masnoon adhkar.
             </p>
             
             {/* Quick Action Buttons */}
@@ -186,27 +284,34 @@ export default function QuranHubPage() {
                 className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md transition flex items-center gap-2"
               >
                 <Download className="w-4 h-4" />
-                <span>Download Quran Books (4 Languages)</span>
+                <span>Download Quran Sharif PDF (All Formats)</span>
+              </a>
+              <a
+                href="#15-line-guide"
+                className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md transition flex items-center gap-2 border border-white/15"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>15 Line Quran PDF Guide</span>
+              </a>
+              <a
+                href="#dua-after-namaz-guide"
+                className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md transition flex items-center gap-2 border border-white/15"
+              >
+                <Heart className="w-4 h-4 text-rose-400" />
+                <span>Dua After Namaz PDF</span>
               </a>
               <a
                 href="#juz-index"
                 className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md transition flex items-center gap-2 border border-white/15"
               >
-                <BookOpen className="w-4 h-4" />
-                <span>Browse Quran Para 1 to 30</span>
-              </a>
-              <a
-                href="#sajdah-guide"
-                className="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm backdrop-blur-md transition flex items-center gap-2 border border-white/15"
-              >
                 <Bookmark className="w-4 h-4" />
-                <span>14 Sajdah Tilawat</span>
+                <span>Browse Quran Para 1 to 30</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Free Quran Book Download Hub & Live Preview in 4 Languages */}
+        {/* Free Quran Book Download Hub & Live Preview in Multi-Languages */}
         <div id="download-quran">
           <QuranDownloadHub />
         </div>
@@ -215,7 +320,7 @@ export default function QuranHubPage() {
         <section className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xs">
           <h2 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-6 flex items-center gap-2">
             <Info className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-            Core Quranic Structure & Statistical Overview
+            Core Quranic Structure &amp; Statistical Overview
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
             <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
@@ -244,23 +349,169 @@ export default function QuranHubPage() {
             </div>
           </div>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-4 leading-relaxed">
-            * <strong>How many pages in Quran:</strong> The standard King Fahd Complex Madani Mushaf consists of 604 pages. <strong>Shortest surah in Quran:</strong> Surah Al-Kawthar (Chapter 108) consists of 3 verses, 10 words, and 42 letters, making it the most concise surah in the Divine text.
+            * <strong>How many pages in Quran:</strong> The standard King Fahd Complex Madani Mushaf in the <strong>15 line Quran PDF</strong> format consists of exactly 604 pages. <strong>Shortest surah in Quran:</strong> Surah Al-Kawthar (Chapter 108) consists of 3 verses, 10 words, and 42 letters, making it the most concise surah in the Divine text.
           </p>
+        </section>
+
+        {/* Feature Deep Dive 1: 15 Line Quran PDF (Saudi Madani Script) */}
+        <section id="15-line-guide" className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-3xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+                <BookOpen className="w-3.5 h-3.5" />
+                Hifz Memorization Standard
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                Why the 15 Line Quran PDF is the Global Choice for Memorization
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                The standard <strong>15 line Quran PDF</strong> based on the Saudi King Fahd Madani Mushaf is recognized by Huffaz and Islamic institutions worldwide as the most effective format for Quran memorization.
+              </p>
+            </div>
+            <a
+              href="https://www.pdfquran.com/download/big/big-quran.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-sm transition shrink-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download 15 Line Quran PDF</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold">1</div>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Ayah-Ending Consistency (Ayat-e-Khatam)
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                In the <strong>15 line Quran PDF</strong>, every single page begins with the start of an ayah and concludes with the finish of an ayah. There are no mid-verse page splits, making mental visualization and photographic recall effortless during Hifz revision.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold">2</div>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Systematic 20-Page Juz Boundaries
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                The 604 pages of the <strong>15 line Quran PDF</strong> are organized so that each of the first 29 Paras spans exactly 20 pages (10 physical leaves). Believers can systematically read one Para each day by reciting 4 pages after each of the 5 daily prayers.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center font-bold">3</div>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                High-Contrast Uthmani Typography
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Written in the pristine calligraphy of Master Calligrapher Uthman Taha, our <strong>15 line Quran PDF</strong> features generous line spacing, distinct stop-signs (Waqf notations), and crisp diacritical markings suitable for phone, tablet, and e-reader screens.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Deep Dive 2: Dua After Namaz PDF & Daily Masnoon Adhkar */}
+        <section id="dua-after-namaz-guide" className="bg-gradient-to-br from-rose-950 via-slate-900 to-brand-950 rounded-3xl p-6 sm:p-10 text-white shadow-xl space-y-6 border border-rose-500/20">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-3xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30">
+                <Heart className="w-3.5 h-3.5 text-rose-400" />
+                Authentic Post-Salah Adhkar Manual
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                Authentic Dua After Namaz PDF: Prophetic Adhkar &amp; Supplications
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Connect your daily Quran recitation directly with your obligatory prayers. Our verified <strong>Dua after Namaz PDF</strong> compiles the authentic supplications recited by Prophet Muhammad ﷺ immediately following the Fard prayers.
+              </p>
+            </div>
+            <a
+              href="/downloads/dua-after-namaz-and-masnoon-adhkar.pdf"
+              download="dua-after-namaz-and-masnoon-adhkar.pdf"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs sm:text-sm shadow-md transition shrink-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download Dua After Namaz PDF</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+            {/* Adhkar 1: Istighfar and Salam */}
+            <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3 backdrop-blur-xs">
+              <span className="font-bold text-rose-300 block text-sm">
+                1. Post-Fard Istighfar &amp; Supplication of Peace (Sahih Muslim 591)
+              </span>
+              <p className="text-lg font-arabic text-emerald-300 text-right leading-relaxed">
+                أَسْتَغْفِرُ اللَّهَ (ثَلَاثًا)، اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالإِكْرَامِ
+              </p>
+              <p className="text-slate-300 italic text-xs">
+                &ldquo;Astaghfirullah (3 times). Allahumma Antas-Salam wa minkas-salam, tabarakta ya Dhal-Jalali wal-Ikram.&rdquo;
+              </p>
+              <p className="text-slate-300 text-xs leading-relaxed">
+                <em>Translation:</em> &ldquo;I seek forgiveness of Allah (three times). O Allah, You are Peace and from You comes peace. Blessed are You, O Owner of majesty and honor.&rdquo;
+              </p>
+            </div>
+
+            {/* Adhkar 2: Ayat al-Kursi & Tasbeeh Fatimi */}
+            <div className="p-5 rounded-2xl bg-white/5 border border-white/10 space-y-3 backdrop-blur-xs">
+              <span className="font-bold text-rose-300 block text-sm">
+                2. Ayat al-Kursi &amp; Tasbeeh Fatimi (Sunan An-Nasa&rsquo;i)
+              </span>
+              <p className="text-slate-200 text-xs leading-relaxed">
+                The Prophet ﷺ said: <em>&ldquo;Whoever recites Ayat al-Kursi immediately after every prescribed prayer, nothing stands between him and entering Paradise except death.&rdquo;</em>
+              </p>
+              <div className="pt-2 border-t border-white/10 space-y-1.5">
+                <p className="text-xs font-semibold text-rose-200">Tasbeeh Fatimi sequence after every Fard prayer:</p>
+                <ul className="list-disc pl-4 space-y-1 text-slate-300 text-xs">
+                  <li><strong>SubhanAllah</strong> (Glory be to Allah) — 33 times</li>
+                  <li><strong>Alhamdulillah</strong> (All praise is due to Allah) — 33 times</li>
+                  <li><strong>Allahu Akbar</strong> (Allah is the Greatest) — 34 times (or 33 times followed by Kalima Tawheed)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-xl bg-white/10 border border-white/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <span className="text-slate-300">
+              📌 The complete <strong>Dua after Namaz PDF</strong> also includes prayers for protection from debt, laziness, grave punishment, and anxiety.
+            </span>
+            <a
+              href="/downloads/dua-after-namaz-and-masnoon-adhkar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-rose-300 hover:text-white font-bold underline shrink-0"
+            >
+              View Dua After Namaz PDF Online &rarr;
+            </a>
+          </div>
         </section>
 
         {/* Master 30 Para Index Table */}
         <section id="juz-index" className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-2">
-              <BookMarked className="w-3.5 h-3.5" />
-              Complete Sacred Division
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-2">
+                <BookMarked className="w-3.5 h-3.5" />
+                Complete Sacred Division
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                Quran Sharif Para 1 to 30 Master Index
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
+                The complete <strong>Quran Sharif Para 1 to 30 PDF</strong> is structured into 30 equal divisions (<span className="font-semibold text-slate-800 dark:text-slate-200">quran para 1 to 30</span>), enabling believers to complete the entire revelation systematically within a single month.
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-              Quran Sharif Para 1 to 30 Master Index
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
-              The 30 equal divisions of the Holy Quran (<span className="font-semibold text-slate-800 dark:text-slate-200">quran para 1 to 30</span>) allow believers to recite the entire revelation systematically within a single month.
-            </p>
+            <a
+              href="/downloads/holy-quran-guide-and-index.pdf"
+              download="quran-sharif-para-1-to-30.pdf"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow-sm transition shrink-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download Quran Sharif Para 1 to 30 PDF</span>
+            </a>
           </div>
 
           <div className="overflow-x-auto">
@@ -270,8 +521,8 @@ export default function QuranHubPage() {
                   <th className="py-3 px-3 rounded-tl-xl font-bold w-16 text-center">Para</th>
                   <th className="py-3 px-3 font-bold">Arabic Opening</th>
                   <th className="py-3 px-3 font-bold">Transliteration</th>
-                  <th className="py-3 px-3 font-bold">Surah & Verse Span</th>
-                  <th className="py-3 px-4 font-bold rounded-tr-xl">Central Themes & Highlights</th>
+                  <th className="py-3 px-3 font-bold">Surah &amp; Verse Span</th>
+                  <th className="py-3 px-4 font-bold rounded-tr-xl">Central Themes &amp; Highlights</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium text-slate-700 dark:text-slate-300">
@@ -315,7 +566,7 @@ export default function QuranHubPage() {
         {/* Deep Dive Callouts for Requested Focus Paras */}
         <section className="space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-            Special Thematic Breakdown of Key Quran Paras
+            Thematic Breakdown of Key Quran Paras
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -351,7 +602,7 @@ export default function QuranHubPage() {
                 Juz 8: Wa Lau Annana (وَلَوْ أَنَّنَا)
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-                Quran Para 8: Creation, Prophetic Missions & Dietary Laws
+                Quran Para 8: Creation, Prophetic Missions &amp; Dietary Laws
               </h3>
               <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
                 In <strong>quran para 8</strong>, the Quran presents extensive rational proofs of Divine unity in cosmic creation. It details lawful (Halal) and unlawful meat, delineates the ten moral commandments of Islam, and recounts the primordial dialogue between Allah and Iblis (Satan) at the creation of Adam. It proceeds into the harrowing histories of the peoples of Prophet Hud, Salih, Lut, and Shu&rsquo;ayb.
@@ -361,13 +612,125 @@ export default function QuranHubPage() {
             {/* Para 29 & 30 */}
             <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-8 space-y-3 shadow-xs">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300">
-                Juz 29 & 30: Tabarakallazi & Amma
+                Juz 29 &amp; 30: Tabarakallazi &amp; Amma
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-                Quran Para 29 & Quran Para 30 (Juz Amma)
+                Quran Para 29 &amp; Quran Para 30 PDF (Juz Amma)
               </h3>
               <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
-                <strong>Quran para 29</strong> opens with Surah Al-Mulk, protecting reciters from the torment of the grave. <strong>Quran para 30</strong> (Juz Amma) contains 37 short, rhythmically powerful Makki surahs memorized by Muslims worldwide and recited in the daily Fard and Sunnah rakats of Salah, ending with the twin protective surahs Al-Falaq and An-Nas.
+                <strong>Quran para 29</strong> opens with Surah Al-Mulk, protecting reciters from the torment of the grave. The <strong>Quran Para 30 PDF</strong> (Juz Amma) contains 37 short, rhythmically powerful Makki surahs memorized by Muslims worldwide and recited in the daily Fard and Sunnah rakats of Salah, ending with the twin protective surahs Al-Falaq and An-Nas.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Deep Dive 3: Quran Para 30 PDF (Juz Amma) Dedicated Hub */}
+        <section className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-3xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-950/60 text-indigo-800 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                <BookOpen className="w-3.5 h-3.5" />
+                Juz Amma • 37 Short Surahs
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                Quran Para 30 PDF (Juz Amma): Short Surahs for Daily Namaz
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                The <strong>Quran Para 30 PDF</strong> covers the 37 short Makki surahs from Surah An-Naba to Surah An-Nas. It is the primary portion of the Quran recited by millions of believers during their 5 daily obligatory prayers and Taraweeh prayers in Ramadan.
+              </p>
+            </div>
+            <a
+              href="/downloads/quran-para-30-juz-amma.pdf"
+              download="quran-para-30-juz-amma.pdf"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs sm:text-sm shadow-sm transition shrink-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download Quran Para 30 PDF</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Core Prayer Recitations
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Surahs such as <em>Surah Al-Ikhlas, Surah Al-Falaq, Surah An-Nas, Surah Al-Kawthar, and Surah Al-Asr</em> from the <strong>Quran Para 30 PDF</strong> form the cornerstone of daily prayer recitation after Surah Al-Fatiha in every rakat of Salah.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Two Sajdah Tilawat Verses
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <strong>Quran Para 30 PDF</strong> contains two profound Sajdah Tilawat verses: in Surah Al-Inshiqaq (84:21) rebuking refusal of prostration, and in Surah Al-Alaq (96:19) commanding believers to prostrate and draw near to Allah.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Ideal for Children &amp; Beginners
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                With concise ayat and powerful poetic rhythm, downloading the <strong>Quran Para 30 PDF</strong> is the recommended first step for children and new Muslims transitioning from basic Noorani Qaida into fluent Quran recitation.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Deep Dive 4: Bangla Quran PDF & Regional Translations */}
+        <section className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-3xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 dark:bg-teal-950/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
+                <BookOpen className="w-3.5 h-3.5" />
+                বাংলা অনুবাদ ও তাফহীম
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+                Bangla Quran PDF: Tafhimul Quran &amp; Bengali Translations
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                Understanding the divine message in your mother tongue is vital for spiritual reflection. Our verified <strong>Bangla Quran PDF</strong> offers authentic Bengali translation alongside lucid Arabic typography for readers across Bangladesh, West Bengal, and the global Bengali diaspora.
+              </p>
+            </div>
+            <a
+              href="https://www.pdfquran.com/download/bengali/bengali-quran.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs sm:text-sm shadow-sm transition shrink-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download Bangla Quran PDF</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Tafhimul Quran Bangla
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                The <strong>Bangla Quran PDF</strong> features scholarly commentary derived from classical works and Tafhimul Quran, explaining the historical context (Shaan-e-Nuzool) and practical lessons of each surah in lucid Bengali prose.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Quran Shikkha Integration
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Complementing structured Quran Shikkha (কুরআন শিক্ষা) classes, this digital edition allows Bengali students to cross-examine Bengali phonetics with authentic Arabic Tajweed rules.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-2">
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                Clean Digital Bengali Typography
+              </h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                Our high-definition <strong>Bangla Quran PDF</strong> is optimized with clean Unicode Bengali rendering and parallel Arabic text, making mobile reading comfortable without eye strain.
               </p>
             </div>
           </div>
@@ -381,7 +744,7 @@ export default function QuranHubPage() {
               Sajdah at-Tilawah Manual
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
-              The 14 Sajdah Tilawat in the Holy Quran
+              The 14 Sajdah Tilawat in the Holy Quran Sharif PDF
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
               According to the consensus of scholars across the Hanafi, Shafi’i, and Hanbali schools, there are exactly <span className="font-semibold text-slate-900 dark:text-slate-100">14 agreed-upon Sajdah Tilawat</span> (<span className="font-semibold">how many sajdah in quran</span>). The <span className="font-semibold text-emerald-700 dark:text-emerald-400">first sajdah in quran</span> occurs in Surah Al-A&rsquo;raf (7:206) in Para 9.
@@ -396,7 +759,7 @@ export default function QuranHubPage() {
                   <th className="py-3 px-3 font-bold">Surah Name</th>
                   <th className="py-3 px-3 font-bold">Verse (Ayah)</th>
                   <th className="py-3 px-3 font-bold">Para (Juz)</th>
-                  <th className="py-3 px-4 font-bold rounded-tr-xl">Spiritual Context & Sign</th>
+                  <th className="py-3 px-4 font-bold rounded-tr-xl">Spiritual Context &amp; Sign</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium text-slate-700 dark:text-slate-300">
@@ -420,7 +783,7 @@ export default function QuranHubPage() {
               Method for Performing Sajdah Tilawat:
             </h4>
             <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              When reciting or listening to any of the 14 verses above, it is Wajib (in the Hanafi school) or Sunnah Mu’akkadah (in the Shafi’i, Maliki, and Hanbali schools) to perform prostration. While in a state of Wudu facing the Qibla, stand up and say <em>&ldquo;Allahu Akbar&rdquo;</em> (without raising your hands to the ears), prostrate directly onto the ground, recite <em>&ldquo;Subhana Rabbiyal A’la&rdquo;</em> three times, and then say <em>&ldquo;Allahu Akbar&rdquo;</em> to rise back up. No Tashahhud or Salam is required.
+              When reciting or listening to any of the 14 verses above in your <strong>Quran Sharif PDF</strong> or during Salah, it is Wajib (in Hanafi jurisprudence) or Sunnah Mu’akkadah to perform prostration. While in a state of Wudu facing the Qibla, stand up and say <em>&ldquo;Allahu Akbar&rdquo;</em> (without raising hands to the ears), prostrate directly onto the ground, recite <em>&ldquo;Subhana Rabbiyal A’la&rdquo;</em> three times, and then say <em>&ldquo;Allahu Akbar&rdquo;</em> to rise back up. No Tashahhud or Salam is required.
             </p>
           </div>
         </section>
@@ -436,7 +799,7 @@ export default function QuranHubPage() {
               Dua Khatam Quran: Sacred Prayer upon Completing Recitation
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
-              Upon finishing the recitation of the 30th Para of the Holy Quran, the believer offers <span className="font-semibold text-slate-900 dark:text-slate-100">dua khatam quran</span>. Anas ibn Malik (may Allah be pleased with him) used to gather his family upon completing the Quran to make heartfelt supplications together.
+              Upon finishing the recitation of the 30th Para of the <strong>Quran Sharif Para 1 to 30 PDF</strong>, the believer offers <span className="font-semibold text-slate-900 dark:text-slate-100">dua khatam quran</span>. Anas ibn Malik (may Allah be pleased with him) used to gather his family upon completing the Quran to make heartfelt supplications together.
             </p>
           </div>
 
@@ -469,7 +832,7 @@ export default function QuranHubPage() {
         <section className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
           <div>
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
-              Modern Quranic Learning, Reflection & Global Education
+              Modern Quranic Learning, Tadabbur &amp; Global Education
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-3xl">
               Connecting traditional scholarship with innovative study methods, digital academies, and regional translations.
@@ -483,7 +846,7 @@ export default function QuranHubPage() {
                 Tagging Al Quran
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                <strong>Tagging al quran</strong> is a structured method of color-coded indexing and thematic sticky-note journaling. Verses are classified under categories like <em>Du’a, Sabr, Tawakkul, Gratitude, and Akhirah</em>, fostering personal Tadabbur.
+                <strong>Tagging al quran</strong> is a structured method of color-coded indexing and thematic sticky-note journaling. Verses in your <strong>quran sharif pdf</strong> are classified under themes like <em>Du’a, Sabr, Tawakkul, Gratitude, and Akhirah</em>, fostering personal Tadabbur.
               </p>
             </div>
 
@@ -520,7 +883,7 @@ export default function QuranHubPage() {
         </section>
 
         {/* FAQs */}
-        <FAQAccordion items={quranFaqs} title="Frequently Asked Questions on the Holy Quran" />
+        <FAQAccordion items={quranFaqs} title="Frequently Asked Questions on Holy Quran Sharif PDF" />
       </div>
     </div>
   );

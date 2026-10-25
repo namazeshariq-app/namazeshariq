@@ -17,6 +17,7 @@ import {
   Globe,
   Check,
   FileText,
+  HelpCircle,
 } from 'lucide-react';
 import { CITIES } from '@/lib/prayer-calc';
 import { useTheme } from '@/context/ThemeContext';
@@ -191,6 +192,13 @@ export default function Header() {
               >
                 <FileText className="w-3.5 h-3.5 text-brand-600 dark:text-emerald-400" />
                 {t('blogs', 'Blogs')}
+              </Link>
+              <Link
+                href="/faqs"
+                className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-brand-700 dark:hover:text-emerald-400 hover:bg-white/40 dark:hover:bg-slate-800/60 transition"
+              >
+                <HelpCircle className="w-3.5 h-3.5 text-brand-600 dark:text-emerald-400" />
+                <span>FAQs</span>
               </Link>
               <Link
                 href="/contact"
@@ -381,6 +389,14 @@ export default function Header() {
               >
                 <FileText className="w-4 h-4 text-brand-600 dark:text-emerald-400" />
                 {t('blogs', 'Blogs')}
+              </Link>
+              <Link
+                href="/faqs"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-sm text-slate-700 dark:text-slate-200 hover:bg-brand-50 dark:hover:bg-slate-800 hover:text-brand-700 dark:hover:text-emerald-400 transition"
+              >
+                <HelpCircle className="w-4 h-4 text-brand-600 dark:text-emerald-400" />
+                <span>FAQs Hub</span>
               </Link>
               <Link
                 href="/contact"

@@ -71,10 +71,22 @@ export default function PrayerTimesHubPage() {
                     </div>
                     <div>
                       <h3 className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-brand-800 dark:group-hover:text-emerald-400 transition text-sm">
-                        {c.name}
+                        {key === 'calicut'
+                          ? 'Namaz Time Calicut'
+                          : key === 'delhi'
+                          ? 'Namaz Time in Delhi (Hanafi)'
+                          : key === 'karachi'
+                          ? 'Karachi & Shia Namaz Timing'
+                          : c.name}
                       </h3>
                       <span className="text-xs text-slate-500 dark:text-slate-400 block">
-                        {c.country} • {c.latitude.toFixed(2)}° N
+                        {key === 'calicut'
+                          ? 'Kerala (Kozhikode) • Shafi’i & Hanafi'
+                          : key === 'delhi'
+                          ? 'Delhi NCR • Jama Masjid & Nizamuddin'
+                          : key === 'karachi'
+                          ? 'Pakistan • Banuri Town & Jafari'
+                          : `${c.country} • ${c.latitude.toFixed(2)}° N`}
                       </span>
                     </div>
                   </div>

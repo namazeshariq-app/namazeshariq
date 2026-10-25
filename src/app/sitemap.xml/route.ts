@@ -39,6 +39,7 @@ export async function GET() {
     { path: '/quran', changefreq: 'daily', priority: '0.95' },
     { path: '/prayer-times', changefreq: 'daily', priority: '0.9' },
     { path: '/rakats', changefreq: 'weekly', priority: '0.9' },
+    { path: '/faqs', changefreq: 'daily', priority: '0.9' },
     { path: '/blog', changefreq: 'daily', priority: '0.8' },
     { path: '/about', changefreq: 'monthly', priority: '0.6' },
     { path: '/contact', changefreq: 'monthly', priority: '0.6' },

@@ -109,6 +109,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/faqs" className="hover:text-emerald-400 transition font-medium text-emerald-300">
+                  Islamic FAQs Hub
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="hover:text-emerald-400 transition">
                   {t('contact')}
                 </Link>
@@ -189,6 +194,83 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Sitewide Crawlable Major City Namaz Timings Directory */}
+        <div className="mt-10 pt-8 border-t border-slate-800 space-y-3">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-400">
+            <MapPin className="w-3.5 h-3.5" />
+            <span>Popular Cities Prayer Timetables (Today Namaz Times)</span>
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs text-slate-400">
+            <Link href="/prayer-times/calicut" className="hover:text-emerald-400 transition font-medium">
+              Namaz Time Calicut
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/delhi" className="hover:text-emerald-400 transition font-medium">
+              Namaz Time in Delhi Hanafi
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/karachi" className="hover:text-emerald-400 transition font-medium">
+              Shia Namaz Timing Karachi
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/bangalore" className="hover:text-emerald-400 transition">
+              Bangalore Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/mumbai" className="hover:text-emerald-400 transition">
+              Mumbai Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/hyderabad" className="hover:text-emerald-400 transition">
+              Hyderabad Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/kochi" className="hover:text-emerald-400 transition">
+              Kochi Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/chennai" className="hover:text-emerald-400 transition">
+              Chennai Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/kolkata" className="hover:text-emerald-400 transition">
+              Kolkata Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/dhaka" className="hover:text-emerald-400 transition">
+              Dhaka Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/dubai" className="hover:text-emerald-400 transition">
+              Dubai Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/sharjah" className="hover:text-emerald-400 transition">
+              Sharjah Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/abu-dhabi" className="hover:text-emerald-400 transition">
+              Abu Dhabi Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/lahore" className="hover:text-emerald-400 transition">
+              Lahore Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/islamabad" className="hover:text-emerald-400 transition">
+              Islamabad Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/london" className="hover:text-emerald-400 transition">
+              London Prayer Times
+            </Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/prayer-times/new-york" className="hover:text-emerald-400 transition">
+              New York Prayer Times
+            </Link>
           </div>
         </div>
 

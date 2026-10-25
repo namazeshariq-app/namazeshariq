@@ -36,7 +36,7 @@ export const CITIES: Record<string, CityInfo> = {
     timezone: 'Asia/Kolkata',
     defaultSchool: 'hanafi',
     method: 'karachi',
-    description: 'Live namaz timings in Delhi NCR including Jama Masjid and Nizamuddin prayer schedules with sunset and sunrise boundaries.',
+    description: 'Accurate namaz time in delhi hanafi today including Jama Masjid, Nizamuddin, and NCR prayer schedules with 2x shadow Asr and sunset boundaries.',
   },
   mumbai: {
     name: 'Mumbai',
@@ -58,7 +58,7 @@ export const CITIES: Record<string, CityInfo> = {
     timezone: 'Asia/Karachi',
     defaultSchool: 'hanafi',
     method: 'karachi',
-    description: 'Official Karachi namaz timings based on University of Islamic Sciences Banuri Town calculation standards.',
+    description: 'Official Karachi prayer times and verified shia namaz timing karachi based on Banuri Town standards and local Shia imambargah sunset buffers.',
   },
   lahore: {
     name: 'Lahore',
@@ -135,7 +135,7 @@ export const CITIES: Record<string, CityInfo> = {
     timezone: 'Asia/Kolkata',
     defaultSchool: 'shafii',
     method: 'karachi',
-    description: 'Malabar region Calicut namaz timings following standard Kerala Islamic councils with Shafi’i and Hanafi Asr options.',
+    description: 'Accurate today namaz time calicut (Kozhikode) with daily prayer timetable, Fajr, Dhuhr, Asr (Shafi’i & Hanafi), Maghrib, and Isha waqt schedules according to Malabar coastal masajid.',
   },
   chennai: {
     name: 'Chennai',

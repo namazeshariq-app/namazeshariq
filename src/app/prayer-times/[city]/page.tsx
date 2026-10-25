@@ -17,6 +17,8 @@ const CITY_ALIASES: Record<string, string> = {
   calcutta: 'kolkata',
   chattogram: 'chittagong',
   nyc: 'new-york',
+  calicat: 'calicut',
+  kozhikode: 'calicut',
 };
 
 function resolveCity(rawSlug: string) {
@@ -42,22 +44,63 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   }
 
   const shortName = city.name.split('(')[0].trim();
-  const title = `Today Namaz Timings in ${shortName} | Namaz-e-Shariq`;
-  const description = `Today namaz timings in ${shortName}, ${city.country}. Verified daily schedules for Fajr, Dhuhr, Asr, Maghrib, and Isha with Hanafi and Shafi'i calculation.`;
+  let title = `Today Namaz Timings in ${shortName} | Namaz-e-Shariq`;
+  let description = `Today namaz timings in ${shortName}, ${city.country}. Verified daily schedules for Fajr, Dhuhr, Asr, Maghrib, and Isha with Hanafi and Shafi'i calculation.`;
+  let customKeywords: string[] = [
+    `namaz timings in ${city.name.toLowerCase()}`,
+    `prayer time in ${city.name.toLowerCase()}`,
+    `today namaz time ${city.name.toLowerCase()}`,
+    `fajr namaz time ${city.name.toLowerCase()}`,
+    `maghrib time ${city.name.toLowerCase()}`,
+    `asr prayer time ${city.name.toLowerCase()}`,
+    `${city.name.toLowerCase()} prayer timetable`,
+  ];
+
+  if (city.slug === 'calicut') {
+    title = 'Namaz Time Calicut Today: Daily Prayer Schedule';
+    description = 'Accurate today namaz time calicut (Kozhikode). Daily prayer timetable for Fajr, Dhuhr, Asr (Shafi\'i & Hanafi), Maghrib, and Isha with local mosque waqt.';
+    customKeywords = [
+      'namaz time calicut',
+      'today namaz time calicut',
+      'calicut namaz time today',
+      'prayer time calicut',
+      'calicut prayer times',
+      'namaz time kozhikode',
+      'fajr time calicut',
+      'maghrib time calicut',
+      'asr time calicut shafii',
+      'kerala prayer timings',
+    ];
+  } else if (city.slug === 'delhi') {
+    title = 'Namaz Time in Delhi Hanafi: Today Prayer Timings Schedule';
+    description = 'Accurate namaz time in delhi hanafi today. Verified Jama Masjid and Nizamuddin prayer schedules for Fajr, Dhuhr, Asr (2x shadow), Maghrib, and Isha.';
+    customKeywords = [
+      'namaz time in delhi hanafi',
+      'namaz time delhi today',
+      'delhi namaz timings hanafi',
+      'jama masjid prayer time',
+      'nizamuddin namaz time',
+      'today namaz time delhi',
+      'hanafi prayer times delhi',
+    ];
+  } else if (city.slug === 'karachi') {
+    title = 'Karachi Prayer Times & Shia Namaz Timing Karachi Today';
+    description = 'Authentic Karachi prayer times & shia namaz timing karachi today. Banuri Town & Shia Jafari timetables for Fajr, Dhuhr, Asr, Maghrib, and Isha waqt.';
+    customKeywords = [
+      'shia namaz timing karachi',
+      'karachi namaz timing',
+      'today prayer time karachi',
+      'banuri town prayer times',
+      'shia prayer times karachi',
+      'maghrib shia time karachi',
+    ];
+  }
 
   return {
     title,
     description,
     alternates: getAlternateLanguages(`/prayer-times/${city.slug}`),
-    keywords: [
-      `namaz timings in ${city.name.toLowerCase()}`,
-      `prayer time in ${city.name.toLowerCase()}`,
-      `today namaz time ${city.name.toLowerCase()}`,
-      `fajr namaz time ${city.name.toLowerCase()}`,
-      `maghrib time ${city.name.toLowerCase()}`,
-      `asr prayer time ${city.name.toLowerCase()}`,
-      `${city.name.toLowerCase()} prayer timetable`,
-    ],
+    keywords: customKeywords,
     openGraph: {
       title,
       description,
@@ -100,15 +143,27 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
       ? [
           {
             question: 'How is namaz time in delhi hanafi determined for today?',
-            answer: `Namaz time in delhi hanafi is calibrated using the 18° astronomical twilight angle for Fajr and Isha, and the 2x shadow length rule for Asr. Masajid across the capital—including Jama Masjid Delhi, Hazrat Nizamuddin, and Fatehpuri Masjid—rely on these verified waqt bounds. For live namaz time delhi today, refer to the interactive timetable above.`,
+            answer: `Namaz time in delhi hanafi is calibrated using the 18° astronomical twilight angle for Fajr and Isha, and the 2x shadow length rule for Asr. Masajid across the capital—including Jama Masjid Delhi, Hazrat Nizamuddin, and Fatehpuri Masjid—rely on these verified waqt bounds. For live namaz time in delhi hanafi today, refer to the interactive timetable above.`,
+          },
+          {
+            question: 'What are the daily prayer schedules for namaz time in delhi hanafi?',
+            answer: `Under the Hanafi calculation followed in Old Delhi, New Delhi, and Jamia Nagar, Fajr begins at Subh Sadiq (${times.fajr}), Dhuhr at solar zenith (${times.dhuhr}), Asr at 2x shadow length (${times.asr}), Maghrib at sunset (${times.maghrib}), and Isha at twilight disappearance (${times.isha}). Check our live timetable for current namaz time in delhi hanafi.`,
           },
         ]
       : []),
     ...(city.slug === 'calicut'
       ? [
           {
-            question: 'What calculation standard is followed for namaz time calicut?',
-            answer: `For namaz time calicut (Kozhikode, Kerala), coastal masajid affiliated with Samastha Kerala Jam'iyyathul Ulama commonly observe the Shafi'i juristic standard (1x shadow length for Asr) alongside the Karachi/MWL solar twilight angles. Both Shafi'i and Hanafi Asr schedules can be toggled above.`,
+            question: 'What is today namaz time calicut for all 5 prayers?',
+            answer: `Today namaz time calicut (Kozhikode) is: Fajr at ${times.fajr} (Sehri ends), Sunrise at ${times.sunrise}, Dhuhr at ${times.dhuhr}, Asr (Shafi'i) at ${times.asr}, Maghrib (Iftar) at ${times.maghrib}, and Isha at ${times.isha}. Use our live widget above to view both Shafi'i and Hanafi schedules for namaz time calicut.`,
+          },
+          {
+            question: 'Why does namaz time calicut follow the Shafi’i Asr calculation?',
+            answer: `In Kerala and the Malabar region, traditional masajid affiliated with Samastha Kerala Jam'iyyathul Ulama follow the Shafi'i madhhab. Therefore, namaz time calicut masajid call the Asr Azan under the 1x shadow length factor, approximately 50 minutes earlier than the North Indian Hanafi timing. Both options are accessible on our namaz time calicut portal.`,
+          },
+          {
+            question: 'Where can I find Sehri and Iftar namaz time calicut during fasting?',
+            answer: `For fasting in Kozhikode, Sehri cutoff concludes promptly at Fajr waqt (${times.fajr}), and Iftar is observed the exact instant the sun sinks into the Arabian Sea at Maghrib (${times.maghrib}). Our live namaz time calicut table provides verified daily astronomical coordinates.`,
           },
         ]
       : []),
@@ -132,7 +187,11 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
       ? [
           {
             question: 'What are the nuances for shia namaz timing karachi compared to Hanafi timings?',
-            answer: `While the predominant schedule across Karachi is calibrated by the University of Islamic Sciences Banuri Town (Hanafi 18°/18° and 2x shadow Asr), shia namaz timing karachi (practiced at prominent Shia masajid such as Mehfil-e-Murtaza and Khoja Jama Masjid) incorporates a 10 to 15-minute sunset twilight buffer for Maghrib and recognizes combined prayer periods.`,
+            answer: `While the predominant Sunni schedule across Karachi is calibrated by the University of Islamic Sciences Banuri Town (Hanafi 18°/18° and 2x shadow Asr), shia namaz timing karachi (practiced at prominent Shia masajid such as Mehfil-e-Murtaza and Khoja Jama Masjid) incorporates a 10 to 15-minute sunset twilight buffer for Maghrib and recognizes combined prayer periods.`,
+          },
+          {
+            question: 'What time is Maghrib and Isha according to shia namaz timing karachi?',
+            answer: `In shia namaz timing karachi (Ja'fari Fiqh), Maghrib starts after the sunset redness (*Humrah Mashriqiyyah*) disappears from the eastern sky, approximately 10 to 15 minutes after the Sunni Maghrib call. Many worshippers in Karachi also pray Maghrib and Isha successively within this period.`,
           },
         ]
       : []),
@@ -221,7 +280,13 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
             {city.name}, {city.country}
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-            Namaz Timings in {city.name} Today
+            {city.slug === 'calicut'
+              ? 'Namaz Time Calicut Today: Daily Prayer Timings & Schedule'
+              : city.slug === 'delhi'
+              ? 'Namaz Time in Delhi Hanafi Today: Prayer Timings & Schedule'
+              : city.slug === 'karachi'
+              ? 'Karachi Prayer Times & Shia Namaz Timing Karachi Today'
+              : `Namaz Timings in ${city.name} Today`}
           </h1>
           <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl">
             {city.description} Coordinates: {city.latitude}° N, {city.longitude}° E. Timezone: {city.timezone}. Calculated via native spherical solar algorithms on Cloudflare Edge.
@@ -374,23 +439,29 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
             </p>
 
             {city.slug === 'delhi' && (
-              <div className="p-4 rounded-xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
-                  Delhi Islamic Waqt Authority & Hanafi Tradition:
+                  Delhi Islamic Waqt Authority &amp; Hanafi Tradition:
                 </h4>
-                <p>
-                  Official <strong>namaz time in delhi hanafi</strong> adheres strictly to the Karachi / Deoband standard (18° Fajr twilight and 2x shadow length for Asr). For believers searching for accurate <strong>namaz time delhi today</strong>, our calculations reflect verified coordinates for Old Delhi (Shahjahanabad), New Delhi, Jamia Nagar, and NCR masajid.
+                <p className="leading-relaxed">
+                  Official <strong>namaz time in delhi hanafi</strong> adheres strictly to the Karachi / Deoband standard (18° Fajr astronomical twilight and 2x shadow length for Asr). For believers searching for accurate <strong>namaz time in delhi hanafi</strong> today, our calculations reflect verified coordinates for Old Delhi (Shahjahanabad), New Delhi, Jamia Nagar, Okhla, and NCR masajid.
+                </p>
+                <p className="leading-relaxed">
+                  Historical centers such as Jama Masjid Delhi, Dargah Hazrat Nizamuddin Aulia, and Fatehpuri Masjid ring the Azan according to this authentic Hanafi timetable. Whether you need morning Fajr Sehri cutoff or afternoon Asr, our portal provides the most reliable <strong>namaz time in delhi hanafi</strong>.
                 </p>
               </div>
             )}
 
             {city.slug === 'calicut' && (
-              <div className="p-4 rounded-xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
-                  Calicut (Kozhikode) Coastal Timetables & Shafi&rsquo;i Observance:
+                  Calicut (Kozhikode) Coastal Timetables &amp; Shafi&rsquo;i Observance:
                 </h4>
-                <p>
-                  Throughout Kozhikode and Malabar coast, <strong>namaz time calicut</strong> masajid predominantly follow the Shafi&rsquo;i school (1x shadow length for Asr) as guided by Samastha Kerala Jam&rsquo;iyyathul Ulama. Both Shafi&rsquo;i and Hanafi Asr options are provided in the calculator above.
+                <p className="leading-relaxed">
+                  Throughout Kozhikode and the Malabar coast, checking <strong>namaz time calicut</strong> ensures strict adherence to local Islamic jurisprudence. Masajid across Calicut—including the historic Mishkal Mosque, Kuttichira Juma Masjid, and Markaz—predominantly follow the Shafi&rsquo;i school (1x shadow length for Asr) as guided by the Samastha Kerala Jam&rsquo;iyyathul Ulama.
+                </p>
+                <p className="leading-relaxed">
+                  Because Calicut is situated on the Arabian Sea coast (11.25° N, 75.78° E), sunset and dusk twilight transition rapidly. For daily fasting or Jamat attendance, worshippers rely on <strong>namaz time calicut</strong> for accurate Sehri cutoff at Fajr dawn and fast-breaking at Maghrib sunset. Both Shafi&rsquo;i and Hanafi Asr schedules are provided in our interactive <strong>namaz time calicut</strong> calculator above.
                 </p>
               </div>
             )}
@@ -398,7 +469,7 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
             {city.slug === 'dhaka' && (
               <div className="p-4 rounded-xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
                 <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
-                  Dhaka Tahajjud & Islamic Foundation Bangladesh Guidelines:
+                  Dhaka Tahajjud &amp; Islamic Foundation Bangladesh Guidelines:
                 </h4>
                 <p>
                   The optimal <strong>tahajjud namaz time dhaka</strong> occurs during the final third of the night between Isha and morning twilight. In Dhaka, Tahajjud vigil and Sehri concludes sharply at Subh Sadiq, aligned with Islamic Foundation Bangladesh criteria.
@@ -418,12 +489,15 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
             )}
 
             {city.slug === 'karachi' && (
-              <div className="p-4 rounded-xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-1.5 text-xs text-slate-700 dark:text-slate-300">
+              <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
-                  Karachi Timetables & Shia Prayer Schedules:
+                  Karachi Timetables &amp; Shia Prayer Schedules:
                 </h4>
-                <p>
-                  While Karachi&rsquo;s Sunni masajid follow the University of Islamic Sciences Banuri Town schedule, <strong>shia namaz timing karachi</strong> observed at Shia masajid and imambargahs incorporates a 10 to 15-minute sunset twilight buffer for Maghrib and recognizes combined prayer windows.
+                <p className="leading-relaxed">
+                  While Karachi&rsquo;s Sunni masajid follow the University of Islamic Sciences Banuri Town schedule, <strong>shia namaz timing karachi</strong> observed at Shia masajid and imambargahs (such as Mehfil-e-Murtaza in PECHS, Khoja Jama Masjid Kharadar, and Yasrab Imambargah Defence) incorporates a 10 to 15-minute sunset twilight buffer for Maghrib.
+                </p>
+                <p className="leading-relaxed">
+                  Under Ja&rsquo;fari Fiqh traditions in <strong>shia namaz timing karachi</strong>, believers may also combine Dhuhr with Asr and Maghrib with Isha during shared permissible hours. Our Karachi timetable allows seamless comparison between Sunni and Shia schedules across all districts of Karachi.
                 </p>
               </div>
             )}

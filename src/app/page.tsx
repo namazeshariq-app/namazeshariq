@@ -293,6 +293,191 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Major Cities Today Namaz Timings Directory Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6 transition-colors duration-200">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-2">
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Verified Regional Waqt Timetables</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+                Today Namaz Times &amp; Prayer Timetables by City
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl leading-relaxed">
+                Direct access to high-accuracy astronomical waqt boundaries, local mosque Azan schedules, and Hanafi &amp; Shafi’i Asr options.
+              </p>
+            </div>
+            <Link
+              href="/prayer-times"
+              className="text-xs font-bold text-brand-700 dark:text-emerald-400 hover:text-brand-900 dark:hover:text-emerald-300 flex items-center gap-1 shrink-0 group"
+            >
+              <span>View All 20+ Global Cities</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Calicut Card */}
+            <Link
+              href="/prayer-times/calicut"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    Kerala • Malabar Coast
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Namaz Time Calicut (Kozhikode)
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Daily prayer schedule for <strong>namaz time calicut</strong> following Samastha Kerala Jam’iyyathul Ulama guidelines with Shafi’i and Hanafi Asr options.
+              </p>
+              <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Calicut Timetable &rarr;
+              </span>
+            </Link>
+
+            {/* Delhi Card */}
+            <Link
+              href="/prayer-times/delhi"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-brand-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    India NCR • Jama Masjid
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-brand-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Namaz Time in Delhi Hanafi
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-950/60 text-brand-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Verified <strong>namaz time in delhi hanafi</strong> based on 18° twilight and 2x shadow Asr, covering Old Delhi, New Delhi, and Jamia Nagar masajid.
+              </p>
+              <span className="text-xs font-bold text-brand-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Delhi Timetable &rarr;
+              </span>
+            </Link>
+
+            {/* Karachi Card */}
+            <Link
+              href="/prayer-times/karachi"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-teal-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    Pakistan • Banuri Town &amp; Shia
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-teal-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Shia Namaz Timing Karachi &amp; Sunni
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-950/60 text-teal-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Official Karachi prayer times and <strong>shia namaz timing karachi</strong> with sunset buffers for Maghrib observed at prominent imambargahs.
+              </p>
+              <span className="text-xs font-bold text-teal-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Karachi Timetable &rarr;
+              </span>
+            </Link>
+
+            {/* Bangalore Card */}
+            <Link
+              href="/prayer-times/bangalore"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    Karnataka • South India
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Bangalore Prayer Times
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Accurate daily waqt for Bangalore (Bengaluru) with Sehri cutoff, Fajr, Dhuhr, Asr, Maghrib, and Isha for local masajid.
+              </p>
+              <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Bangalore Timetable &rarr;
+              </span>
+            </Link>
+
+            {/* Mumbai Card */}
+            <Link
+              href="/prayer-times/mumbai"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-amber-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    Maharashtra • Coastal Precision
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-amber-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Mumbai Prayer Times
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Daily prayer timetable in Mumbai with precise coastal twilight, Minara Masjid schedules, and monthly prayer charts.
+              </p>
+              <span className="text-xs font-bold text-amber-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Mumbai Timetable &rarr;
+              </span>
+            </Link>
+
+            {/* Dubai Card */}
+            <Link
+              href="/prayer-times/dubai"
+              className="p-5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-emerald-500 hover:bg-emerald-50/20 dark:hover:bg-slate-800/40 transition group flex flex-col justify-between space-y-3"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[11px] font-bold text-sky-600 dark:text-emerald-400 uppercase tracking-wider block mb-0.5">
+                    United Arab Emirates • IACAD
+                  </span>
+                  <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base group-hover:text-sky-600 dark:group-hover:text-emerald-400 transition-colors">
+                    Dubai Prayer Times
+                  </h3>
+                </div>
+                <div className="w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-950/60 text-sky-700 dark:text-emerald-300 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Official Dubai daily prayer schedules authorized by IACAD with Fajr dawn, Dhuhr, Asr, Maghrib sunset, and Isha timings.
+              </p>
+              <span className="text-xs font-bold text-sky-700 dark:text-emerald-400 flex items-center gap-1 group-hover:underline pt-1">
+                Check Dubai Timetable &rarr;
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured In-Depth Educational Articles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">
