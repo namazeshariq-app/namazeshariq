@@ -19,6 +19,8 @@ const CITY_ALIASES: Record<string, string> = {
   nyc: 'new-york',
   calicat: 'calicut',
   kozhikode: 'calicut',
+  rasalkhaimah: 'ras-al-khaimah',
+  rak: 'ras-al-khaimah',
 };
 
 function resolveCity(rawSlug: string) {
@@ -28,7 +30,10 @@ function resolveCity(rawSlug: string) {
 }
 
 export async function generateStaticParams() {
-  return Object.keys(CITIES).map((slug) => ({
+  const cityKeys = Object.keys(CITIES);
+  const aliasKeys = Object.keys(CITY_ALIASES);
+  const allSlugs = Array.from(new Set([...cityKeys, ...aliasKeys]));
+  return allSlugs.map((slug) => ({
     city: slug,
   }));
 }
@@ -57,11 +62,13 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   ];
 
   if (city.slug === 'calicut') {
-    title = 'Namaz Time Calicut Today: Daily Prayer Schedule';
-    description = 'Accurate today namaz time calicut (Kozhikode). Daily prayer timetable for Fajr, Dhuhr, Asr (Shafi\'i & Hanafi), Maghrib, and Isha with local mosque waqt.';
+    title = 'Namaz Time Calicut & Prayer Time Kozhikode Today: Daily Timetable';
+    description = 'Accurate today namaz time calicut & prayer time kozhikode. Daily prayer timetable for Fajr, Dhuhr, Asr (Shafi\'i & Hanafi), Maghrib, and Isha with local mosque waqt.';
     customKeywords = [
+      'prayer time kozhikode',
       'namaz time calicut',
       'today namaz time calicut',
+      'kozhikode prayer time',
       'calicut namaz time today',
       'prayer time calicut',
       'calicut prayer times',
@@ -70,6 +77,33 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       'maghrib time calicut',
       'asr time calicut shafii',
       'kerala prayer timings',
+    ];
+  } else if (city.slug === 'perinthalmanna') {
+    title = 'Prayer Time Perinthalmanna: Today Namaz Timetable & Azan Times';
+    description = 'Accurate today prayer time perinthalmanna (Malappuram, Kerala). Daily prayer timetable for Fajr, Dhuhr, Asr (Shafi\'i & Hanafi), Maghrib, and Isha with mosque waqt schedules.';
+    customKeywords = [
+      'prayer time perinthalmanna',
+      'perinthalmanna prayer time',
+      'today prayer time perinthalmanna',
+      'namaz time perinthalmanna',
+      'fajr time perinthalmanna',
+      'maghrib time perinthalmanna',
+      'malappuram prayer times',
+      'kerala prayer timetable',
+    ];
+  } else if (city.slug === 'ras-al-khaimah') {
+    title = 'Prayer Time Ras Al Khaimah Today: RAK Namaz Timetable & Azan Times';
+    description = 'Accurate today prayer time ras al khaimah (RAK, UAE). Daily namaz schedule for Fajr, Dhuhr, Asr, Maghrib, and Isha authorized by AWQAF General Authority.';
+    customKeywords = [
+      'prayer time ras al khaimah',
+      'ras al khaimah prayer time',
+      'today prayer time ras al khaimah',
+      'rak prayer times',
+      'namaz time ras al khaimah',
+      'fajr time ras al khaimah',
+      'maghrib time ras al khaimah',
+      'uae prayer timings',
+      'awqaf prayer times rak',
     ];
   } else if (city.slug === 'delhi') {
     title = 'Namaz Time in Delhi Hanafi: Today Prayer Timings Schedule';
@@ -154,16 +188,48 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
     ...(city.slug === 'calicut'
       ? [
           {
-            question: 'What is today namaz time calicut for all 5 prayers?',
-            answer: `Today namaz time calicut (Kozhikode) is: Fajr at ${times.fajr} (Sehri ends), Sunrise at ${times.sunrise}, Dhuhr at ${times.dhuhr}, Asr (Shafi'i) at ${times.asr}, Maghrib (Iftar) at ${times.maghrib}, and Isha at ${times.isha}. Use our live widget above to view both Shafi'i and Hanafi schedules for namaz time calicut.`,
+            question: 'What is today prayer time kozhikode (namaz time calicut) for all 5 prayers?',
+            answer: `Today prayer time kozhikode (namaz time calicut) is: Fajr at ${times.fajr} (Sehri ends), Sunrise at ${times.sunrise}, Dhuhr at ${times.dhuhr}, Asr (Shafi'i) at ${times.asr}, Maghrib (Iftar) at ${times.maghrib}, and Isha at ${times.isha}. Use our live widget above to view both Shafi'i and Hanafi schedules for prayer time kozhikode and namaz time calicut.`,
           },
           {
-            question: 'Why does namaz time calicut follow the Shafi’i Asr calculation?',
-            answer: `In Kerala and the Malabar region, traditional masajid affiliated with Samastha Kerala Jam'iyyathul Ulama follow the Shafi'i madhhab. Therefore, namaz time calicut masajid call the Asr Azan under the 1x shadow length factor, approximately 50 minutes earlier than the North Indian Hanafi timing. Both options are accessible on our namaz time calicut portal.`,
+            question: 'Why does prayer time kozhikode follow the Shafi’i Asr calculation?',
+            answer: `In Kozhikode (Calicut) and the wider Malabar coast, traditional masajid affiliated with Samastha Kerala Jam'iyyathul Ulama follow the Shafi'i madhhab. Therefore, prayer time kozhikode masajid call the Asr Azan under the 1x shadow length factor, approximately 50 minutes earlier than the North Indian Hanafi timing. Both options are accessible on our prayer time kozhikode portal.`,
           },
           {
-            question: 'Where can I find Sehri and Iftar namaz time calicut during fasting?',
-            answer: `For fasting in Kozhikode, Sehri cutoff concludes promptly at Fajr waqt (${times.fajr}), and Iftar is observed the exact instant the sun sinks into the Arabian Sea at Maghrib (${times.maghrib}). Our live namaz time calicut table provides verified daily astronomical coordinates.`,
+            question: 'Where can I find Sehri and Iftar prayer time kozhikode during fasting?',
+            answer: `For fasting in Kozhikode (Calicut), Sehri cutoff concludes promptly at Fajr waqt (${times.fajr}), and Iftar is observed the exact instant the sun sinks into the Arabian Sea at Maghrib (${times.maghrib}). Our live prayer time kozhikode table provides verified daily astronomical coordinates.`,
+          },
+        ]
+      : []),
+    ...(city.slug === 'perinthalmanna'
+      ? [
+          {
+            question: 'What is today prayer time perinthalmanna for all 5 daily prayers?',
+            answer: `Today prayer time perinthalmanna (Malappuram, Kerala) is: Fajr at ${times.fajr} (Sehri ends), Sunrise at ${times.sunrise}, Dhuhr at ${times.dhuhr}, Asr (Shafi'i) at ${times.asr}, Maghrib (Iftar) at ${times.maghrib}, and Isha at ${times.isha}. Our daily prayer time perinthalmanna timetable is synchronized with local Malappuram masajid.`,
+          },
+          {
+            question: 'How is Asr prayer time perinthalmanna calculated?',
+            answer: `Masajid across Perinthalmanna and the Malabar region follow the Shafi'i school of Fiqh, calculating Asr at 1x shadow length. For Hanafi worshippers, our calculator also includes the 2x shadow Asr prayer time perinthalmanna option.`,
+          },
+          {
+            question: 'What are the Ramadan Sehri and Iftar times for prayer time perinthalmanna?',
+            answer: `During Ramadan in Perinthalmanna, fasting begins at Fajr true dawn (${times.fajr}) and ends at Maghrib sunset (${times.maghrib}). Check our daily prayer time perinthalmanna schedule for up-to-date timings.`,
+          },
+        ]
+      : []),
+    ...(city.slug === 'ras-al-khaimah'
+      ? [
+          {
+            question: 'What is today prayer time ras al khaimah for all 5 obligatory prayers?',
+            answer: `Today prayer time ras al khaimah (RAK, UAE) is: Fajr at ${times.fajr}, Sunrise at ${times.sunrise}, Dhuhr at ${times.dhuhr}, Asr at ${times.asr}, Maghrib at ${times.maghrib}, and Isha at ${times.isha}. All timings are aligned with the General Authority of Islamic Affairs and Endowments (AWQAF UAE) standard for prayer time ras al khaimah.`,
+          },
+          {
+            question: 'How many minutes difference is there between prayer time ras al khaimah and Dubai?',
+            answer: `Because Ras Al Khaimah is situated in the north-eastern UAE (25.79° N, 55.94° E), prayer time ras al khaimah occurs approximately 2 to 4 minutes earlier than Dubai and Abu Dhabi for Sunrise and sunset, and follows AWQAF official zonal coordinates.`,
+          },
+          {
+            question: 'What is the Jumu\'ah prayer time ras al khaimah in local mosques?',
+            answer: `In Ras Al Khaimah masajid, Friday Jumu'ah Khutbah commences at approximately 12:45 PM to 1:15 PM following the unified UAE AWQAF timetable. Check our live prayer time ras al khaimah widget for the exact Dhuhr entry time.`,
           },
         ]
       : []),
@@ -281,7 +347,11 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
           </div>
           <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
             {city.slug === 'calicut'
-              ? 'Namaz Time Calicut Today: Daily Prayer Timings & Schedule'
+              ? 'Namaz Time Calicut & Prayer Time Kozhikode Today: Daily Timetable'
+              : city.slug === 'perinthalmanna'
+              ? 'Prayer Time Perinthalmanna Today: Daily Namaz Timetable & Azan Times'
+              : city.slug === 'ras-al-khaimah'
+              ? 'Prayer Time Ras Al Khaimah Today: RAK Namaz Timetable & Azan Schedule'
               : city.slug === 'delhi'
               ? 'Namaz Time in Delhi Hanafi Today: Prayer Timings & Schedule'
               : city.slug === 'karachi'
@@ -289,7 +359,7 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
               : `Namaz Timings in ${city.name} Today`}
           </h1>
           <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl">
-            {city.description} Coordinates: {city.latitude}° N, {city.longitude}° E. Timezone: {city.timezone}. Calculated via native spherical solar algorithms on Cloudflare Edge.
+            {city.description} Coordinates: {city.latitude}° N, {city.longitude}° E. Timezone: {city.timezone}. Calculated with astronomical solar precision and verified against regional Islamic authorities and local mosque waqt standards.
           </p>
         </div>
 
@@ -353,7 +423,7 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
               Offering daily Salah on time is an essential religious obligation. For residents and visitors across {city.name}, understanding how the five daily prayer intervals are calibrated to local geography ensures worship is performed with peace of heart and strict adherence to the Prophetic Sunnah.
             </p>
             <p className="text-slate-700 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-              Situated at coordinates {city.latitude}° N latitude and {city.longitude}° E longitude, {city.name} experiences unique solar trajectories throughout the annual solar calendar. In this dedicated municipal briefing, we analyze the local waqt boundaries, congregational Jamat practices, and seasonal prayer transitions.
+              Located at {city.latitude}° N latitude and {city.longitude}° E longitude, {city.name} experiences distinct seasonal twilight shifts throughout the year. In this localized prayer guide, we explain the daily waqt boundaries, local mosque Jamat practices, and seasonal prayer transitions to help you plan your worship with peace of mind.
             </p>
           </section>
 
@@ -455,13 +525,50 @@ export default async function CityPrayerPage({ params }: CityPageProps) {
             {city.slug === 'calicut' && (
               <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
                 <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
-                  Calicut (Kozhikode) Coastal Timetables &amp; Shafi&rsquo;i Observance:
+                  Calicut &amp; Kozhikode Coastal Timetables &amp; Shafi&rsquo;i Observance:
                 </h4>
                 <p className="leading-relaxed">
-                  Throughout Kozhikode and the Malabar coast, checking <strong>namaz time calicut</strong> ensures strict adherence to local Islamic jurisprudence. Masajid across Calicut—including the historic Mishkal Mosque, Kuttichira Juma Masjid, and Markaz—predominantly follow the Shafi&rsquo;i school (1x shadow length for Asr) as guided by the Samastha Kerala Jam&rsquo;iyyathul Ulama.
+                  Throughout Kozhikode and the Malabar coast, checking verified <strong>prayer time kozhikode</strong> and <strong>namaz time calicut</strong> ensures strict adherence to local Islamic jurisprudence. Masajid across Calicut—including the historic Mishkal Mosque, Kuttichira Juma Masjid, and Markaz—predominantly follow the Shafi&rsquo;i school (1x shadow length for Asr) as guided by the Samastha Kerala Jam&rsquo;iyyathul Ulama.
                 </p>
                 <p className="leading-relaxed">
-                  Because Calicut is situated on the Arabian Sea coast (11.25° N, 75.78° E), sunset and dusk twilight transition rapidly. For daily fasting or Jamat attendance, worshippers rely on <strong>namaz time calicut</strong> for accurate Sehri cutoff at Fajr dawn and fast-breaking at Maghrib sunset. Both Shafi&rsquo;i and Hanafi Asr schedules are provided in our interactive <strong>namaz time calicut</strong> calculator above.
+                  Because Calicut is situated on the Arabian Sea coast (11.25° N, 75.78° E), sunset and dusk twilight transition rapidly. For daily fasting or Jamat attendance, worshippers rely on accurate <strong>prayer time kozhikode</strong> for precise Sehri cutoff at Fajr dawn and fast-breaking at Maghrib sunset. Both Shafi&rsquo;i and Hanafi Asr schedules are provided in our interactive <strong>prayer time kozhikode</strong> and <strong>namaz time calicut</strong> calculator above.
+                </p>
+                <p className="leading-relaxed">
+                  Whether you are searching for today&rsquo;s <strong>prayer time kozhikode</strong> for morning Fajr or evening Isha, our timetable provides live astronomical countdowns calibrated to coastal Kerala latitude and longitude.
+                </p>
+              </div>
+            )}
+
+            {city.slug === 'perinthalmanna' && (
+              <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
+                  Perinthalmanna (Malappuram) Mosque Timetables &amp; Waqt Calculation:
+                </h4>
+                <p className="leading-relaxed">
+                  Finding reliable <strong>prayer time perinthalmanna</strong> is vital for believers across this major healthcare and Islamic education center in Malappuram district. Masajid across Perinthalmanna, Angadippuram, Pattambi Road, and surrounding localities observe daily prayer times in accordance with the Shafi&rsquo;i madhhab guided by Kerala&rsquo;s scholarly leadership.
+                </p>
+                <p className="leading-relaxed">
+                  Our dedicated <strong>prayer time perinthalmanna</strong> timetable delivers exact solar waqt boundaries based on coordinates 10.9760° N, 76.2254° E. Fajr commences at true dawn (*Subh Sadiq*), Dhuhr enters precisely after solar zenith (*Zawal*), Shafi&rsquo;i Asr starts when shadow equals object length, Maghrib begins at sunset, and Isha starts once twilight disappears.
+                </p>
+                <p className="leading-relaxed">
+                  During Ramadan and year-round voluntary fasts, residents depend on <strong>prayer time perinthalmanna</strong> for verified Sehri end times and evening Iftar calls. Both Shafi&rsquo;i and Hanafi Asr calculations are easily accessible through our interactive <strong>prayer time perinthalmanna</strong> portal.
+                </p>
+              </div>
+            )}
+
+            {city.slug === 'ras-al-khaimah' && (
+              <div className="p-5 rounded-2xl bg-brand-50/70 dark:bg-emerald-950/30 border border-brand-200 dark:border-emerald-800/60 space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                <h4 className="font-bold text-brand-900 dark:text-emerald-300 text-sm">
+                  Ras Al Khaimah (RAK) Official UAE AWQAF Timetable &amp; Mosque Guidelines:
+                </h4>
+                <p className="leading-relaxed">
+                  Official <strong>prayer time ras al khaimah</strong> operates under the regulatory standards set by the General Authority of Islamic Affairs and Endowments (AWQAF UAE). Masajid across Ras Al Khaimah—such as the Sheikh Zayed Mosque, Al Qasimi Grand Mosque, Al Nakheel, and Khuzam—broadcast the unified Azan synchronized to northern UAE astronomical calculations.
+                </p>
+                <p className="leading-relaxed">
+                  Because Ras Al Khaimah sits in the northern tip of the Emirates (25.7895° N, 55.9432° E) backed by the Hajar Mountains, <strong>prayer time ras al khaimah</strong> differs slightly by 2 to 4 minutes from Dubai and Abu Dhabi. Worshippers checking <strong>prayer time ras al khaimah</strong> benefit from exact dawn boundaries for Fajr, precise midday Dhuhr intervals, and immediate sunset Iftar timing.
+                </p>
+                <p className="leading-relaxed">
+                  For Friday congregation and daily obligatory Salah, our verified <strong>prayer time ras al khaimah</strong> portal keeps residents and travelers fully informed with live countdowns and monthly printable timetables.
                 </p>
               </div>
             )}

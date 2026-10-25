@@ -478,6 +478,103 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Comprehensive Educational Section: The Pillars of Daily Prayer & The Holy Quran */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 md:p-12 shadow-xs space-y-8 transition-colors duration-200">
+          <div className="max-w-3xl space-y-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+              <BookOpen className="w-3.5 h-3.5" />
+              <span>Spiritual Foundation &amp; Daily Practice</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">
+              The Sacred Rhythm of Daily Salah &amp; The Holy Quran
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base leading-relaxed">
+              In Islam, worship is not an isolated event; it is the heartbeat that regulates the believer&rsquo;s entire day. From the first stirrings of astronomical dawn at Fajr to the quiet stillness of night at Isha, the five daily prayers anchor the human spirit in divine gratitude and purpose.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <div className="space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 flex items-center justify-center text-sm font-bold">1</span>
+                The Divine Purpose of Timed Worship (Salah)
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                The Holy Quran proclaims: <em>&ldquo;Indeed, prayer has been decreed upon the believers a decree of specified times&rdquo;</em> (Surah An-Nisa, 4:103). Each prayer is appointed to a natural solar transition, reminding us that time is a sacred trust. When a Muslim pauses work, studies, and worldly concerns to wash in ritual purity (Wudu) and stand humbly before the Creator, worldly stress dissolves into peace (*Sakinah*).
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Salah serves as a spiritual mirror. It cleanses minor missteps between prayers, nurtures mindfulness (*Taqwa*), and instills moral discipline. By bowing in Ruku and prostrating in Sujood, the servant acknowledges humility before the Lord of all creation, cultivating a compassionate character that extends outward to family, neighbors, and society.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-950/70 text-brand-800 dark:text-emerald-300 flex items-center justify-center text-sm font-bold">2</span>
+                The Living Companionship of the Holy Quran
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                The core of every rakat is the recitation of the Holy Quran. Beginning with the opening chapter, Surah Al-Fatihah—the seven oft-repeated verses of prayer and praise—the worshipper engages in direct conversation with Allah. Reciting additional surahs or verses from across the 30 Paras of the Quran enriches this daily bond, inviting deeper contemplation (*Tadabbur*) into divine wisdom.
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Throughout the Quran, 14 special verses call upon the reader to perform Sajdah Tilawat—an immediate prostration of reverence and devotion. Pairing regular daily prayer with consistent Quran reading, whether in the morning after Fajr or during quiet evening hours, forms the spiritual backbone of Islamic living.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-teal-100 dark:bg-teal-950/70 text-teal-800 dark:text-emerald-300 flex items-center justify-center text-sm font-bold">3</span>
+                Observing the Natural Sunnah: Solar Geometry &amp; Modern Tools
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Classical Islamic scholars were pioneers of observational astronomy because determining accurate prayer times and Qibla direction required precise celestial measurements. The Prophet Muhammad (peace be upon him) defined prayer windows through natural physical markers: true astronomical dawn (*Subh Sadiq*), the sun passing its zenith (*Zawal*), the shadow of an object lengthening, sunset (*Ghurub*), and the disappearance of twilight (*Shafaq*).
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Namaz-e-Shariq bridges these timeless observational principles with high-precision solar calculations. By calculating local solar elevation angles, coordinates, and juristic shadow ratios for your specific city, our tools help you align your daily routine with the natural signs established by Allah in the heavens.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2">
+                <span className="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-950/70 text-amber-800 dark:text-amber-300 flex items-center justify-center text-sm font-bold">4</span>
+                The Blessing of Congregational Prayer (Salat al-Jama&rsquo;ah)
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                The Prophet Muhammad (peace be upon him) taught that prayer offered in congregation (*Jamat*) is twenty-seven times more rewarding than prayer offered alone. In neighborhood masajid across the globe, believers stand shoulder to shoulder, regardless of ethnicity, social status, or age, exemplifying universal equality and unity under God.
+              </p>
+              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                We encourage all worshippers to join their local mosque congregation whenever possible. Our timetables provide waqt start times so you can arrive at the masjid with ample time for Wudu, Sunnah prayers, and peaceful anticipation of the Iqamah call.
+              </p>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="space-y-1 text-center sm:text-left">
+              <h4 className="font-bold text-slate-900 dark:text-slate-100 text-sm sm:text-base">
+                Looking to deepen your daily Islamic learning?
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                Download the complete Quran Sharif Para 1 to 30 PDF, learn step-by-step namaz rakats, or explore regional mosque timetables.
+              </p>
+            </div>
+            <div className="flex items-center gap-3 shrink-0">
+              <Link
+                href="/quran"
+                className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition shadow-xs"
+              >
+                Quran Downloads
+              </Link>
+              <Link
+                href="/rakats"
+                className="px-4 py-2.5 rounded-xl bg-brand-800 hover:bg-brand-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-semibold text-xs transition shadow-xs"
+              >
+                Rakat Table
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured In-Depth Educational Articles */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">

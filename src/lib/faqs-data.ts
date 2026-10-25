@@ -186,6 +186,16 @@ export const MASTER_FAQS: FAQItem[] = [
     keywords: ['zuhar namaz rakat', '12 rakats dhuhr'],
   },
   {
+    id: 'jummah-prayer-rakats',
+    category: 'namaz',
+    categoryLabel: 'Daily Namaz Rakats',
+    question: 'How many jummah prayer rakats are performed on Friday (Friday Namaz)?',
+    answer:
+      'In the Hanafi school, jummah prayer rakats total 14: 4 Sunnah Mu’akkadah before the Khutbah and Fard, 2 Fard performed in congregation behind the Imam, followed by 4 Sunnah Mu’akkadah, 2 Sunnah, and 2 Nafl. In the Shafi’i and Hanbali schools, jummah prayer rakats consist of 2 Sunnah before, 2 Fard with the Imam, and 2 or 4 Sunnah after (totaling 6 or 8 rakats). The core individual obligation for every Muslim male is the 2 Fard rakats.',
+    link: { text: 'Read Full Jummah Prayer Rakats Guide', href: '/rakats#jummah-prayer-rakats' },
+    keywords: ['jummah prayer rakats', 'friday namaz rakats', 'jummah rakat table'],
+  },
+  {
     id: 'asr-namaz-rakat',
     category: 'namaz',
     categoryLabel: 'Daily Namaz Rakats',
@@ -292,14 +302,34 @@ export const MASTER_FAQS: FAQItem[] = [
 
   // --- CITY PRAYER TIMINGS ---
   {
-    id: 'namaz-time-calicut',
+    id: 'prayer-time-kozhikode',
     category: 'timings',
     categoryLabel: 'City Prayer Timings',
-    question: 'How is today namaz time calicut calculated for Malabar masajid?',
+    question: 'How is today prayer time kozhikode (namaz time calicut) calculated for Malabar masajid?',
     answer:
-      'Namaz time calicut (Kozhikode, Kerala) follows coastal Malabar astronomical solar coordinates (11.25° N, 75.78° E). Masajid under Samastha Kerala Jam’iyyathul Ulama observe the Shafi’i 1x shadow factor for Asr. Both Shafi’i and Hanafi Asr options are provided on our namaz time calicut page.',
-    link: { text: 'Check Today Namaz Time Calicut Timetable', href: '/prayer-times/calicut' },
-    keywords: ['namaz time calicut', 'kozhikode prayer times', 'kerala namaz timing'],
+      'Today prayer time kozhikode (namaz time calicut, Kerala) follows coastal Malabar astronomical solar coordinates (11.25° N, 75.78° E). Masajid under Samastha Kerala Jam’iyyathul Ulama observe the Shafi’i 1x shadow factor for Asr. Both Shafi’i and Hanafi Asr options are provided on our prayer time kozhikode and namaz time calicut page.',
+    link: { text: 'Check Today Prayer Time Kozhikode Timetable', href: '/prayer-times/calicut' },
+    keywords: ['prayer time kozhikode', 'namaz time calicut', 'kozhikode prayer times', 'kerala namaz timing'],
+  },
+  {
+    id: 'prayer-time-perinthalmanna',
+    category: 'timings',
+    categoryLabel: 'City Prayer Timings',
+    question: 'What is today prayer time perinthalmanna for all 5 daily prayers in Malappuram?',
+    answer:
+      'Today prayer time perinthalmanna follows coordinates 10.9760° N, 76.2254° E for Malappuram district masajid. Fajr starts at Subh Sadiq dawn, Dhuhr enters after solar zenith, Asr follows the Shafi’i 1x shadow standard, Maghrib begins at sunset, and Isha follows dusk twilight disappearance. Access live prayer time perinthalmanna on our dedicated city portal.',
+    link: { text: 'Check Today Prayer Time Perinthalmanna Schedule', href: '/prayer-times/perinthalmanna' },
+    keywords: ['prayer time perinthalmanna', 'perinthalmanna prayer times', 'malappuram namaz timings'],
+  },
+  {
+    id: 'prayer-time-ras-al-khaimah',
+    category: 'timings',
+    categoryLabel: 'City Prayer Timings',
+    question: 'What is the official prayer time ras al khaimah today according to UAE AWQAF?',
+    answer:
+      'Official prayer time ras al khaimah (RAK, UAE) is calculated according to the General Authority of Islamic Affairs and Endowments (AWQAF UAE) standards (25.79° N, 55.94° E). Because of its north-eastern position backed by the Hajar Mountains, prayer time ras al khaimah occurs 2 to 4 minutes earlier than Dubai and Abu Dhabi for sunrise and Maghrib sunset.',
+    link: { text: 'Check Official Prayer Time Ras Al Khaimah Timetable', href: '/prayer-times/ras-al-khaimah' },
+    keywords: ['prayer time ras al khaimah', 'rak prayer times', 'uae awqaf prayer schedule'],
   },
   {
     id: 'namaz-time-delhi-hanafi',

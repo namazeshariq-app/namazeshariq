@@ -22,11 +22,11 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except static files and Next internals:
+     * Match all request paths except static files, assets, and Next internals:
      * - _next/static (static assets)
      * - _next/image (image optimization)
-     * - favicon.ico, images, icons
+     * - favicon.ico, images, icons, xml, xsl, txt, pdf, manifests
      */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|xml|xsl|txt|pdf|webmanifest)).*)',
   ],
 };

@@ -72,7 +72,11 @@ export default function PrayerTimesHubPage() {
                     <div>
                       <h3 className="font-bold text-slate-900 dark:text-slate-100 group-hover:text-brand-800 dark:group-hover:text-emerald-400 transition text-sm">
                         {key === 'calicut'
-                          ? 'Namaz Time Calicut'
+                          ? 'Calicut & Kozhikode Prayer Time'
+                          : key === 'perinthalmanna'
+                          ? 'Prayer Time Perinthalmanna'
+                          : key === 'ras-al-khaimah'
+                          ? 'Prayer Time Ras Al Khaimah'
                           : key === 'delhi'
                           ? 'Namaz Time in Delhi (Hanafi)'
                           : key === 'karachi'
@@ -82,6 +86,10 @@ export default function PrayerTimesHubPage() {
                       <span className="text-xs text-slate-500 dark:text-slate-400 block">
                         {key === 'calicut'
                           ? 'Kerala (Kozhikode) • Shafi’i & Hanafi'
+                          : key === 'perinthalmanna'
+                          ? 'Kerala (Malappuram) • Shafi’i Timetable'
+                          : key === 'ras-al-khaimah'
+                          ? 'UAE (RAK) • Official AWQAF Timetable'
                           : key === 'delhi'
                           ? 'Delhi NCR • Jama Masjid & Nizamuddin'
                           : key === 'karachi'
@@ -247,6 +255,58 @@ export default function PrayerTimesHubPage() {
               <li>Wash both feet up to and including the ankles three times, starting with the right foot and passing fingers between toes.</li>
               <li>Conclude with the authentic prophetic supplication: <em>&ldquo;Ashhadu alla ilaha illallahu wahdahu la sharika lahu, wa ashhadu anna Muhammadan &lsquo;abduhu wa rasuluh.&rdquo;</em></li>
             </ol>
+          </section>
+
+          <section className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+              The Three Prohibited Times of Prayer (Auqat al-Makruhah)
+            </h3>
+            <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              Islamic law designates three specific solar intervals during the day when offering voluntary (*Nafl*) or general prayers is strictly disliked or prohibited (*Makruh Tahrimi*), as narrated by Uqbah ibn Amir (may Allah be pleased with him) in Sahih Muslim (831):
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <span className="font-bold text-slate-900 dark:text-slate-100 block text-sm mb-1">
+                  1. During Sunrise (*Tulu&rsquo;*)
+                </span>
+                <p className="leading-relaxed">
+                  From the moment the upper rim of the sun emerges on the horizon until it rises above the horizon by the height of a spear (approximately 15 to 20 minutes after sunrise). Once this period lapses, Ishraq and Duha prayers become permissible.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <span className="font-bold text-slate-900 dark:text-slate-100 block text-sm mb-1">
+                  2. At Midday Zenith (*Istiwa / Zawal*)
+                </span>
+                <p className="leading-relaxed">
+                  When the sun reaches its highest celestial meridian at noon until it begins its descent toward the west. This interval is brief (lasting 2 to 5 minutes). Immediately upon the sun declining past the meridian, Dhuhr enters and prayer is restored.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60">
+                <span className="font-bold text-slate-900 dark:text-slate-100 block text-sm mb-1">
+                  3. During Sunset (*Ghurub*)
+                </span>
+                <p className="leading-relaxed">
+                  When the sun pales and dims yellow in the west until it sets completely below the horizon. If one has not yet performed that day&rsquo;s Asr due to an unavoidable emergency, one must still offer the Fard Asr before Maghrib, though delaying intentionally is sinful.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+              The Sacred Call to Prayer (Adhan): Etiquette &amp; Supplication
+            </h3>
+            <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              When the Adhan echoes across the neighborhood to announce the entry of waqt, the Sunnah teaches believers to pause worldly conversations and respond attentively. The Prophet Muhammad (peace be upon him) instructed: <em>&ldquo;When you hear the call, repeat what the Mu&rsquo;adhdhin says&rdquo;</em> (Sahih al-Bukhari).
+            </p>
+            <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+              When the caller proclaims <em>&ldquo;Hayya &lsquo;alas-Salah&rdquo;</em> (Come to prayer) and <em>&ldquo;Hayya &lsquo;alal-Falah&rdquo;</em> (Come to success), the listener responds with: <em>&ldquo;La hawla wa la quwwata illa billah&rdquo;</em> (There is no power nor might except with Allah). Following the completion of the Adhan, reciting blessings upon the Prophet followed by the Dua of Wasilah guarantees prophetic intercession on the Day of Judgment:
+            </p>
+            <blockquote className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border-l-4 border-emerald-600 dark:border-emerald-500 text-xs sm:text-sm text-slate-700 dark:text-slate-300 italic">
+              &ldquo;Allahumma Rabba hadhihid-da&lsquo;watit-tammah, was-salatil-qa&rsquo;imah, ati Muhammadanil-wasilata wal-fadilah, wab&lsquo;ath-hu maqamam-mahmudanilladhi wa&lsquo;adtah.&rdquo;
+            </blockquote>
           </section>
         </div>
       </div>

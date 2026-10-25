@@ -70,23 +70,22 @@ export async function GET() {
   const languages = ['en', 'ur', 'ar', 'hi', 'bn', 'x-default'];
 
   let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-  xml += `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n`;
   xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n`;
 
   for (const item of allItems) {
     const fullUrl = `${SITE_URL}${item.path}`;
     xml += `  <url>\n`;
     xml += `    <loc>${escapeXml(fullUrl)}</loc>\n`;
+    xml += `    <lastmod>${item.lastmod}</lastmod>\n`;
+    xml += `    <changefreq>${item.changefreq}</changefreq>\n`;
+    xml += `    <priority>${item.priority}</priority>\n`;
 
-    // Localized Hreflang Alternates
+    // Localized Hreflang Alternates (placed after priority in strict compliance with Sitemaps 0.9 XSD sequence)
     for (const lang of languages) {
       const altUrl = lang === 'en' || lang === 'x-default' ? fullUrl : `${fullUrl}?lang=${lang}`;
       xml += `    <xhtml:link rel="alternate" hreflang="${lang}" href="${escapeXml(altUrl)}" />\n`;
     }
 
-    xml += `    <lastmod>${item.lastmod}</lastmod>\n`;
-    xml += `    <changefreq>${item.changefreq}</changefreq>\n`;
-    xml += `    <priority>${item.priority}</priority>\n`;
     xml += `  </url>\n`;
   }
 

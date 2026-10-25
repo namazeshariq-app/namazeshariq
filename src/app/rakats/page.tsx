@@ -19,11 +19,12 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { generateBreadcrumbSchema, generateFAQSchema, getAlternateLanguages, SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Namaz Rakat Table: 5 Daily Prayers & Namaz Ke Faraiz',
+  title: 'Namaz Rakat Table: 5 Daily Prayers & Jummah Prayer Rakats',
   description:
-    'Complete namaz rakat table for all 5 daily prayers (Zuhar namaz rakat, Asr, Maghrib, Isha, Fajr), namaz ke faraiz, namaz janaza, and Shabe Baraat namaz guide.',
+    'Complete namaz rakat table for all 5 daily prayers, jummah prayer rakats (Friday prayer breakdown), Zuhar namaz rakat, namaz ke faraiz, namaz janaza, and Shabe Baraat namaz guide.',
   alternates: getAlternateLanguages('/rakats'),
   keywords: [
+    'jummah prayer rakats',
     'namaz rakat table',
     'rakat namaz',
     'zuhar namaz rakat',
@@ -56,6 +57,11 @@ export default function RakatsPage() {
       question: 'What is the exact breakdown for Zuhar namaz rakat and Asr namaz rakat?',
       answer:
         'Zuhar namaz rakat consists of 12 rakats in total: 4 Sunnah Mu’akkadah before Fard, 4 Fard, 2 Sunnah Mu’akkadah after Fard, and 2 optional Nafl. Asr namaz rakat consists of 8 rakats in total: 4 Sunnah Ghayr Mu’akkadah followed by 4 Fard.',
+    },
+    {
+      question: 'How many jummah prayer rakats are performed on Friday (Friday Namaz)?',
+      answer:
+        'In the Hanafi school, jummah prayer rakats total 14: 4 Sunnah Mu’akkadah before the Khutbah and Fard, 2 Fard performed in congregation behind the Imam, followed by 4 Sunnah Mu’akkadah, 2 Sunnah, and 2 Nafl. In the Shafi’i and Hanbali schools, jummah prayer rakats consist of 2 Sunnah before, 2 Fard with the Imam, and 2 or 4 Sunnah after (totaling 6 or 8 rakats). The core individual obligation for every Muslim male is the 2 Fard rakats.',
     },
     {
       question: 'What are Namaz Ke Faraiz (the essential obligations of prayer)?',
@@ -137,6 +143,9 @@ export default function RakatsPage() {
             <a href="#zuhar-rakat-guide" className="px-3.5 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 transition">
               Zuhar Namaz Rakat
             </a>
+            <a href="#jummah-prayer-rakats" className="px-3.5 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 transition">
+              Jummah Prayer Rakats
+            </a>
             <a href="#namaz-ke-faraiz" className="px-3.5 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 transition">
               Namaz Ke Faraiz
             </a>
@@ -209,6 +218,19 @@ export default function RakatsPage() {
                   <td className="py-4 px-4 text-center text-emerald-700 dark:text-emerald-400 font-semibold">2 (Mu’akkadah)</td>
                   <td className="py-4 px-4 text-center">2 Nafl</td>
                   <td className="py-4 px-4 text-center font-extrabold text-brand-950 dark:text-emerald-200 bg-slate-50 dark:bg-slate-800/60">12</td>
+                </tr>
+
+                {/* Jummah (jummah prayer rakats) */}
+                <tr className="hover:bg-slate-50 dark:hover:bg-slate-800/40 bg-emerald-50/30 dark:bg-emerald-950/20">
+                  <td className="py-4 px-4 font-bold text-slate-900 dark:text-slate-100">
+                    Jummah / Jumu’ah (Friday)
+                    <span className="block text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold">jummah prayer rakats: 14 total (Hanafi) / 8 (Shafi’i)</span>
+                  </td>
+                  <td className="py-4 px-4 text-center text-emerald-700 dark:text-emerald-400 font-semibold">4 (Mu’akkadah)</td>
+                  <td className="py-4 px-4 text-center font-extrabold text-brand-900 dark:text-emerald-300 bg-brand-50/50 dark:bg-emerald-950/20">2 (In Jamat)</td>
+                  <td className="py-4 px-4 text-center text-emerald-700 dark:text-emerald-400 font-semibold">4 + 2 (Mu’akkadah)</td>
+                  <td className="py-4 px-4 text-center">2 Nafl</td>
+                  <td className="py-4 px-4 text-center font-extrabold text-brand-950 dark:text-emerald-200 bg-slate-50 dark:bg-slate-800/60">14 Routine (2 Fard)</td>
                 </tr>
 
                 {/* Asr (asr namaz rakat) */}
@@ -309,6 +331,56 @@ export default function RakatsPage() {
               <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">2 Nafl (Voluntary)</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-xs">
                 Concludes the full 12 <strong>zuhar namaz rakat</strong> routine. Brings immense additional spiritual rewards and compensates for minor deficiencies in voluntary attention.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Dedicated Section: Jummah Prayer Rakats Guide */}
+        <section id="jummah-prayer-rakats" className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
+              <Sparkles className="w-3.5 h-3.5" />
+              Friday Congregational Prayer Manual
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100">
+              Jummah Prayer Rakats: Complete Friday Namaz Guide &amp; Rakat Breakdown
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+              On Friday, the weekly congregational Salah replaces the standard Dhuhr prayer for adult Muslim men. Understanding the exact order of <strong>jummah prayer rakats</strong> ensures full spiritual merit according to the authentic Prophetic Sunnah. In the classical Hanafi manual, <strong>jummah prayer rakats</strong> comprise <strong>14 total rakats</strong> (with 2 Fard obligatory behind the Imam), while in the Shafi’i tradition <strong>jummah prayer rakats</strong> comprise <strong>6 or 8 rakats</strong>.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs sm:text-sm">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-1.5">
+              <span className="font-bold text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-wider block">Stage 1: Before Khutbah</span>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">4 Sunnah Mu’akkadah</h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-xs">
+                Offered individually before the Khatib ascends the Minbar for the Arabic Khutbah. Strongly emphasized in <strong>jummah prayer rakats</strong> according to Abdullah ibn Mas’ud (RA). In the Shafi’i school, 2 rakats Tahiyyat al-Masjid are offered upon entering.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 space-y-1.5">
+              <span className="font-bold text-emerald-800 dark:text-emerald-300 text-xs uppercase tracking-wider block">Stage 2: Core Obligation</span>
+              <h3 className="font-bold text-brand-900 dark:text-emerald-200 text-base">2 Fard (In Congregation)</h3>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-xs">
+                The absolute obligatory core of <strong>jummah prayer rakats</strong>. Prayed behind the Imam with audible (Jahri) recitation of Surah Al-Fatiha and surahs (frequently Surah Al-A’la and Surah Al-Ghashiyah or Surah Al-Jumu’ah).
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-1.5">
+              <span className="font-bold text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-wider block">Stage 3: Post-Fard Sunnah</span>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">4 + 2 Sunnah Rakats</h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-xs">
+                Offered after the 2 Fard. The Prophet ﷺ instructed: <em>&ldquo;When any one of you prays Jumu’ah, let him pray four rakats after it.&rdquo;</em> (Sahih Muslim). In Hanafi fiqh, 4 Sunnah followed by 2 Sunnah reconcile all authentic narrations.
+              </p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-1.5">
+              <span className="font-bold text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-wider block">Stage 4: Voluntary Closing</span>
+              <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">2 Nafl (Optional)</h3>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-xs">
+                Concludes the complete 14 <strong>jummah prayer rakats</strong> routine. Brings tremendous spiritual rewards on Sayyid al-Ayyam (the Master of Days), followed by reciting Surah Al-Kahf and sending abundant Salawat upon the Prophet ﷺ.
               </p>
             </div>
           </div>

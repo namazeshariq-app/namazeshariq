@@ -142,8 +142,21 @@ export default function TermsPage() {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-2.5">
+              <BookOpen className="w-5 h-5 text-brand-700 dark:text-emerald-400" />
+              8. Authenticity of Quran Downloads &amp; Religious PDF Guides
+            </h2>
+            <p>
+              All digital editions of the Holy Quran, multi-lingual translations (including English, Urdu, Telugu, and Bengali), and downloadable PDF study guides (such as the 30 Para Guide, 15 Line Quran, and Duas After Namaz) hosted on Namaz-e-Shariq are provided as a free public service for spiritual education (*Waqf lillahi Ta&lsquo;ala*).
+            </p>
+            <p>
+              Users are reminded to treat physical printouts of Quranic verses and noble supplications with reverence, ensuring they are handled in ritual cleanliness (*Taharah*) and stored in a dignified manner. Commercial reproduction, bundling into paid digital packages, or reselling these sacred resources is strictly forbidden under both our intellectual property terms and Islamic religious ethics.
+            </p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight flex items-center gap-2.5">
               <Mail className="w-5 h-5 text-brand-700 dark:text-emerald-400" />
-              7. Dispute Resolution, Amendments & Editorial Contact
+              9. Dispute Resolution, Amendments &amp; Editorial Contact
             </h2>
             <p>
               In the event of any disagreement or concern regarding content published on this website, both parties agree to resolve the matter through good-faith communication, scholarly mediation (*Sulh*), and mutual respect before pursuing formal legal avenues.

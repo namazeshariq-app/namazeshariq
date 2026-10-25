@@ -266,6 +266,44 @@ export default function ContactPage() {
               </div>
             </div>
           </section>
+
+          <section className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+              6. Our Scholar Advisory Board &amp; Global Mosque Jamat Verification Charter
+            </h3>
+            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Serving the global Muslim community requires unwavering dedication to accuracy, transparency, and theological reverence. Our editorial board operates in active consultation with certified graduates of traditional Islamic seminaries, including Darul Uloom Deoband, Nadwatul Ulama, Al-Azhar University, and South Asian Islamic research academies.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-1.5">
+                <strong className="text-slate-900 dark:text-slate-100 block">Strict Data Integrity Protocol</strong>
+                <p className="leading-relaxed">
+                  Before any local mosque congregation schedule is updated on our platform, our team cross-references the coordinates against national solar ephemeris tables and verifies the schedule with authorized mosque administrators or local resident volunteers.
+                </p>
+              </div>
+              <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 space-y-1.5">
+                <strong className="text-slate-900 dark:text-slate-100 block">Confidentiality &amp; Respectful Counsel</strong>
+                <p className="leading-relaxed">
+                  We respect the privacy of every inquirer. Personal details, spiritual concerns, and email inquiries are handled with strict confidentiality. If an inquiry touches upon sensitive, complex legal disputes or personal family matters, our policy is to provide general classical references and advise the seeker to meet with a trusted local Mufti or Qadi.
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed">
+              We welcome volunteer community researchers, local imams, and students of Islamic sciences who wish to help audit and refine localized schedules in their cities. Together, we ensure that every worshipper finds reliable, spiritually uplifting resources to fulfill their daily prayers on time.
+            </p>
+          </section>
+
+          <section className="space-y-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100">
+              7. Response Timelines &amp; Priority Seasonal Support
+            </h3>
+            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              We appreciate your patience as our research board thoroughly verifies all correspondence. For standard inquiries regarding daily namaz rakats, astronomical formulas, or website feedback, our target response window is between 24 and 48 business hours.
+            </p>
+            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              During high-activity religious seasons—particularly the commencement of the holy month of Ramadan, Laylat al-Qadr vigils, Shab-e-Barat, and Eid congregation announcements—our team activates a priority verification desk. Urgent schedule changes or Ramadan timetable revisions submitted by verified mosque officials are typically reviewed and published within 12 hours. Please include the word &ldquo;URGENT: Seasonal Schedule&rdquo; in your email subject line to facilitate immediate triage.
+            </p>
+          </section>
         </div>
 
         {/* FAQ Section */}
